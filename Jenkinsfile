@@ -30,15 +30,15 @@ node {
         }
     }
 
-    stage('frontend tests') {
-        try {
-            sh "./mvnw com.github.eirslett:frontend-maven-plugin:gulp -Dfrontend.gulp.arguments=test"
-        } catch(err) {
-            throw err
-        } finally {
-            junit '**/target/test-results/karma/TESTS-*.xml'
-        }
-    }
+//    stage('frontend tests') {
+ //       try {
+//            sh "./mvnw com.github.eirslett:frontend-maven-plugin:gulp -Dfrontend.gulp.arguments=test"
+//        } catch(err) {
+ //           throw err
+ //       } finally {
+ //           junit '**/target/test-results/karma/TESTS-*.xml'
+ //       }
+ //   }
 
     stage('packaging') {
         sh "./mvnw package -Pprod -DskipTests"
