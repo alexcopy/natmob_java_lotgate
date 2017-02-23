@@ -112,11 +112,6 @@
                                 ball5: null,
                                 luckyStar1: null,
                                 luckyStar2: null,
-                                raffle: null,
-                                drawNumber: null,
-                                sumB: null,
-                                sumS: null,
-                                hash: null,
                                 id: null
                             };
                         }

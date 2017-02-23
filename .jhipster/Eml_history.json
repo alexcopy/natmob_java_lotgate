@@ -63,26 +63,6 @@
             "fieldValidateRules": [
                 "required"
             ]
-        },
-        {
-            "fieldName": "raffle",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "drawNumber",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "sumB",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "sumS",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "hash",
-            "fieldType": "String"
         }
     ],
     "changelogDate": "20170216132455",
