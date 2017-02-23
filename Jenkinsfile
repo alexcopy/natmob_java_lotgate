@@ -14,7 +14,7 @@ node {
     }
 
     stage('install tools') {
-        sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-yarn -DnodeVersion=v6.9.5 -DyarnVersion=v0.19.1"
+        sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-yarn -DnodeVersion=v6.9.4 -DyarnVersion=v0.19.1"
     }
 
     stage('yarn install') {
@@ -30,15 +30,15 @@ node {
         }
     }
 
-//    stage('frontend tests') {
- //       try {
-//            sh "./mvnw com.github.eirslett:frontend-maven-plugin:gulp -Dfrontend.gulp.arguments=test"
-//        } catch(err) {
- //           throw err
- //       } finally {
- //           junit '**/target/test-results/karma/TESTS-*.xml'
- //       }
- //   }
+    stage('frontend tests') {
+        try {
+            sh "./mvnw com.github.eirslett:frontend-maven-plugin:gulp -Dfrontend.gulp.arguments=test"
+        } catch(err) {
+            throw err
+        } finally {
+            junit '**/target/test-results/karma/TESTS-*.xml'
+        }
+    }
 
     stage('packaging') {
         sh "./mvnw package -Pprod -DskipTests"

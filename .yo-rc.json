@@ -21,7 +21,6 @@
     "useSass": false,
     "clientPackageManager": "yarn",
     "applicationType": "gateway",
-    "clientFramework": "angular1",
     "testFrameworks": [
       "gatling"
     ],
@@ -31,6 +30,7 @@
     "languages": [
       "en",
       "ru"
-    ]
+    ],
+    "clientFramework": "angular1"
   }
 }
