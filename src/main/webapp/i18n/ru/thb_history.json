@@ -1,0 +1,32 @@
+{
+    "natmobApp": {
+        "thb_history" : {
+            "home": {
+                "title": "Thb Histories",
+                "createLabel": "Создать новый Thb History",
+                "createOrEditLabel": "Создать или отредактировать Thb History",
+                "search": "Найти Thb History"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Thb History {{ id }}?"
+            },
+            "detail": {
+                "title": "Thb History"
+            },
+            "drawDate": "Draw Date",
+            "ball1": "Ball 1",
+            "ball2": "Ball 2",
+            "ball3": "Ball 3",
+            "ball4": "Ball 4",
+            "ball5": "Ball 5",
+            "thunderBall": "Thunder Ball"
+        }
+    },
+    "lotappApp": {
+        "thb_history" : {
+            "created": "Новый Thb History создан с идентификатором {{ param }}",
+            "updated": "Thb History обновлен с идентификатором {{ param }}",
+            "deleted": "Thb History удален с идентификатором {{ param }}"
+        }
+    }
+}

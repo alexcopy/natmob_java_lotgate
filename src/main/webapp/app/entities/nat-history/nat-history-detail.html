@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="natmobApp.nat_history.detail.title">Nat History</span> {{vm.nat_history.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="natmobApp.nat_history.drawDate">Draw Date</span></dt>
+        <dd>
+            <span>{{vm.nat_history.drawDate}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.nat_history.ball1">Ball 1</span></dt>
+        <dd>
+            <span>{{vm.nat_history.ball1}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.nat_history.ball2">Ball 2</span></dt>
+        <dd>
+            <span>{{vm.nat_history.ball2}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.nat_history.ball3">Ball 3</span></dt>
+        <dd>
+            <span>{{vm.nat_history.ball3}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.nat_history.ball4">Ball 4</span></dt>
+        <dd>
+            <span>{{vm.nat_history.ball4}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.nat_history.ball5">Ball 5</span></dt>
+        <dd>
+            <span>{{vm.nat_history.ball5}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.nat_history.ball6">Ball 6</span></dt>
+        <dd>
+            <span>{{vm.nat_history.ball6}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.nat_history.bonusBall">Bonus Ball</span></dt>
+        <dd>
+            <span>{{vm.nat_history.bonusBall}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="nat-history-detail.edit({id:vm.nat_history.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
