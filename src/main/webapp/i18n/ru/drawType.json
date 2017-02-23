@@ -1,0 +1,11 @@
+{
+    "natmobApp": {
+        "DrawType" : {
+            "null": "",
+            "local": "local",
+            "manual": "manual",
+            "real": "real",
+            "other": "other"
+        }
+    }
+}
