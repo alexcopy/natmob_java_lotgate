@@ -1,0 +1,39 @@
+{
+    "natmobApp": {
+        "nat_history" : {
+            "home": {
+                "title": "Nat Histories",
+                "createLabel": "Создать новый Nat History",
+                "createOrEditLabel": "Создать или отредактировать Nat History",
+                "search": "Найти Nat History"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Nat History {{ id }}?"
+            },
+            "detail": {
+                "title": "Nat History"
+            },
+            "drawDate": "Draw Date",
+            "ball1": "Ball 1",
+            "ball2": "Ball 2",
+            "ball3": "Ball 3",
+            "ball4": "Ball 4",
+            "ball5": "Ball 5",
+            "ball6": "Ball 6",
+            "bonusBall": "Bonus Ball",
+            "machine": "Machine",
+            "raffles": "Raffles",
+            "drawNumber": "Draw Number",
+            "sumB": "Sum B",
+            "hash": "Hash",
+            "timestamp": "Timestamp"
+        }
+    },
+    "lotappApp": {
+        "nat_history" : {
+            "created": "Новый Nat History создан с идентификатором {{ param }}",
+            "updated": "Nat History обновлен с идентификатором {{ param }}",
+            "deleted": "Nat History удален с идентификатором {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+#-------------------------------------------------------------------------------
+# Note for using the rate-limiting:
+#   The comment part won't be copied if you use the subgenerator docker-compose
+#   you have to manually copy it
+#-------------------------------------------------------------------------------
+version: '2'
+services:
+    natmob-app:
+        image: natmob
+        external_links:
+            - natmob-mongodb:mongodb
+            # Uncomment to have Cassandra working with the gateway
+            # - natmob-cassandra:cassandra
+            - jhipster-registry:registry
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@registry:8761/config
+            - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017
+            - SPRING_DATA_MONGODB_DATABASE=natmob
+            - SPRING_DATA_CASSANDRA_CONTACTPOINTS=cassandra
+            - JHIPSTER_SLEEP=30 # gives time for the Cassandra cluster to start and execute the migration scripts
+        ports:
+            - 8080:8080
+    natmob-mongodb:
+        extends:
+            file: mongodb.yml
+            service: natmob-mongodb
+    # Uncomment to have Cassandra working with the gateway
+    # natmob-cassandra:
+    #     extends:
+    #         file: cassandra-cluster.yml
+    #         service: natmob-cassandra
+    # natmob-cassandra-migration:
+    #     extends:
+    #         file: cassandra-migration.yml
+    #         service: natmob-cassandra-migration
+    #     environment:
+    #         - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql
+    jhipster-registry:
+        extends:
+            file: jhipster-registry.yml
+            service: jhipster-registry
+        environment:
+            - SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=file:./central-config/docker-config/

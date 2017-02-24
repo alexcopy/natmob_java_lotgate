@@ -1,0 +1,99 @@
+<div>
+    <h2 data-translate="natmobApp.nat_history.home.title">Nat Histories</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="nat-history.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="natmobApp.nat_history.home.createLabel">
+                        Create new Nat History
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'natmobApp.nat_history.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="natmobApp.nat_history.drawDate">Draw Date</span></th>
+                    <th><span data-translate="natmobApp.nat_history.ball1">Ball 1</span></th>
+                    <th><span data-translate="natmobApp.nat_history.ball2">Ball 2</span></th>
+                    <th><span data-translate="natmobApp.nat_history.ball3">Ball 3</span></th>
+                    <th><span data-translate="natmobApp.nat_history.ball4">Ball 4</span></th>
+                    <th><span data-translate="natmobApp.nat_history.ball5">Ball 5</span></th>
+                    <th><span data-translate="natmobApp.nat_history.ball6">Ball 6</span></th>
+                    <th><span data-translate="natmobApp.nat_history.bonusBall">Bonus Ball</span></th>
+                    <th><span data-translate="natmobApp.nat_history.machine">Machine</span></th>
+                    <th><span data-translate="natmobApp.nat_history.raffles">Raffles</span></th>
+                    <th><span data-translate="natmobApp.nat_history.drawNumber">Draw Number</span></th>
+                    <th><span data-translate="natmobApp.nat_history.sumB">Sum B</span></th>
+                    <th><span data-translate="natmobApp.nat_history.hash">Hash</span></th>
+                    <th><span data-translate="natmobApp.nat_history.timestamp">Timestamp</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="nat_history in vm.nat_histories track by nat_history.id">
+                    <td><a ui-sref="nat-history-detail({id:nat_history.id})">{{nat_history.id}}</a></td>
+                    <td>{{nat_history.drawDate}}</td>
+                    <td>{{nat_history.ball1}}</td>
+                    <td>{{nat_history.ball2}}</td>
+                    <td>{{nat_history.ball3}}</td>
+                    <td>{{nat_history.ball4}}</td>
+                    <td>{{nat_history.ball5}}</td>
+                    <td>{{nat_history.ball6}}</td>
+                    <td>{{nat_history.bonusBall}}</td>
+                    <td>{{nat_history.machine}}</td>
+                    <td>{{nat_history.raffles}}</td>
+                    <td>{{nat_history.drawNumber}}</td>
+                    <td>{{nat_history.sumB}}</td>
+                    <td>{{nat_history.hash}}</td>
+                    <td>{{nat_history.timestamp}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="nat-history-detail({id:nat_history.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="nat-history.edit({id:nat_history.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="nat-history.delete({id:nat_history.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+{
+    "natmobApp": {
+        "eml_history" : {
+            "home": {
+                "title": "Eml Histories",
+                "createLabel": "Создать новый Eml History",
+                "createOrEditLabel": "Создать или отредактировать Eml History",
+                "search": "Найти Eml History"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Eml History {{ id }}?"
+            },
+            "detail": {
+                "title": "Eml History"
+            },
+            "drawDate": "Draw Date",
+            "ball1": "Ball 1",
+            "ball2": "Ball 2",
+            "ball3": "Ball 3",
+            "ball4": "Ball 4",
+            "ball5": "Ball 5",
+            "luckyStar1": "Lucky Star 1",
+            "luckyStar2": "Lucky Star 2"
+        }
+    },
+    "lotappApp": {
+        "eml_history" : {
+            "created": "Новый Eml History создан с идентификатором {{ param }}",
+            "updated": "Eml History обновлен с идентификатором {{ param }}",
+            "deleted": "Eml History удален с идентификатором {{ param }}"
+        }
+    }
+}

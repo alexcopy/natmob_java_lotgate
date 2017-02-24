@@ -1,0 +1,91 @@
+<div>
+    <h2 data-translate="natmobApp.eml_plays.home.title">Eml Plays</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="eml-plays.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="natmobApp.eml_plays.home.createLabel">
+                        Create new Eml Plays
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'natmobApp.eml_plays.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.drawDate">Draw Date</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.prize">Prize</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.checked">Checked</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.tickets">Tickets</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.prizeHigh">Prize High</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.prizeLow">Prize Low</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.coeficient">Coeficient</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.spent">Spent</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.prizeFreq">Prize Freq</span></th>
+                    <th><span data-translate="natmobApp.eml_plays.balanse">Balanse</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="eml_plays in vm.eml_plays track by eml_plays.id">
+                    <td><a ui-sref="eml-plays-detail({id:eml_plays.id})">{{eml_plays.id}}</a></td>
+                    <td>{{eml_plays.drawDate}}</td>
+                    <td>{{eml_plays.prize}}</td>
+                    <td>{{eml_plays.checked}}</td>
+                    <td>{{eml_plays.tickets}}</td>
+                    <td>{{eml_plays.prizeHigh}}</td>
+                    <td>{{eml_plays.prizeLow}}</td>
+                    <td>{{eml_plays.coeficient}}</td>
+                    <td>{{eml_plays.spent}}</td>
+                    <td>{{eml_plays.prizeFreq}}</td>
+                    <td>{{eml_plays.balanse}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="eml-plays-detail({id:eml_plays.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="eml-plays.edit({id:eml_plays.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="eml-plays.delete({id:eml_plays.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

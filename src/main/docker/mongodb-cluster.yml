@@ -1,0 +1,17 @@
+version: '2'
+services:
+    natmob-mongodb:
+        container_name: natmob-mongodb
+        image: mongo:3.2.10
+        ports:
+            - "27017:27017"
+        command: mongos --configdb natmob-mongodb-config
+    natmob-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    natmob-mongodb-config:
+        image: mongo:3.2.10
+        container_name: natmob-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
