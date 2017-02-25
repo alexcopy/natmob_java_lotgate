@@ -1,0 +1,35 @@
+{
+    "natmobApp": {
+        "thb_plays" : {
+            "home": {
+                "title": "Thb Plays",
+                "createLabel": "Создать новый Thb Plays",
+                "createOrEditLabel": "Создать или отредактировать Thb Plays",
+                "search": "Найти Thb Plays"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Thb Plays {{ id }}?"
+            },
+            "detail": {
+                "title": "Thb Plays"
+            },
+            "drawDate": "Draw Date",
+            "prize": "Prize",
+            "checked": "Checked",
+            "tickets": "Tickets",
+            "prizeHigh": "Prize High",
+            "prizeLow": "Prize Low",
+            "coeficient": "Coeficient",
+            "spent": "Spent",
+            "prizeFreq": "Prize Freq",
+            "balanse": "Balanse"
+        }
+    },
+    "lotappApp": {
+        "thb_plays" : {
+            "created": "Новый Thb Plays создан с идентификатором {{ param }}",
+            "updated": "Thb Plays обновлен с идентификатором {{ param }}",
+            "deleted": "Thb Plays удален с идентификатором {{ param }}"
+        }
+    }
+}

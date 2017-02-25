@@ -1,0 +1,52 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "drawDate",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "prize",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "checked",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "tickets",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "prizeHigh",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "prizeLow",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "coeficient",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "spent",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "prizeFreq",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170216184642",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "nat_plays",
+    "pagination": "no",
+    "microserviceName": "lotapp",
+    "searchEngine": "elasticsearch"
+}

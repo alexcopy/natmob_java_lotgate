@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span data-translate="natmobApp.thb_plays.detail.title">Thb Plays</span> {{vm.thb_plays.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="natmobApp.thb_plays.drawDate">Draw Date</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.drawDate}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.prize">Prize</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.prize}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.checked">Checked</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.checked}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.tickets">Tickets</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.tickets}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.prizeHigh">Prize High</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.prizeHigh}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.prizeLow">Prize Low</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.prizeLow}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.coeficient">Coeficient</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.coeficient}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.spent">Spent</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.spent}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.prizeFreq">Prize Freq</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.prizeFreq}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.thb_plays.balanse">Balanse</span></dt>
+        <dd>
+            <span>{{vm.thb_plays.balanse}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="thb-plays-detail.edit({id:vm.thb_plays.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -13,6 +13,8 @@
                 "natHistory": "Nat History",
                 "thbHistory": "Thb History",
                 "emlPlays": "Eml Plays",
+                "natPlays": "Nat Plays",
+                "thbPlays": "Thb Plays",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

@@ -2,8 +2,8 @@
     "natmobApp": {
         "DrawType" : {
             "null": "",
-            "local": "local",
             "manual": "manual",
+            "local": "local",
             "real": "real",
             "other": "other"
         }

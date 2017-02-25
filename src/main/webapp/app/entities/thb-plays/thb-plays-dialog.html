@@ -1,0 +1,102 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myThb_playsLabel" data-translate="natmobApp.thb_plays.home.createOrEditLabel">Create or edit a Thb Plays</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.thb_plays.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.thb_plays.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.drawDate" for="field_drawDate">Draw Date</label>
+            <input type="text" class="form-control" name="drawDate" id="field_drawDate"
+                    ng-model="vm.thb_plays.drawDate"
+                    required ng-pattern="/(\d\d-\w+-\d\d)/"/>
+            <div ng-show="editForm.drawDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.drawDate.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.drawDate.$error.pattern" data-translate="entity.validation.pattern" translate-value-pattern="(\d\d-\w+-\d\d)">
+                    This field should follow pattern "(\d\d-\w+-\d\d)".
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.prize" for="field_prize">Prize</label>
+            <input type="number" class="form-control" name="prize" id="field_prize"
+                    ng-model="vm.thb_plays.prize"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.checked" for="field_checked">Checked</label>
+            <input type="checkbox" class="form-control" name="checked" id="field_checked"
+                    ng-model="vm.thb_plays.checked"
+                    />
+            <div ng-show="editForm.checked.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.checked.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.tickets" for="field_tickets">Tickets</label>
+            <input type="number" class="form-control" name="tickets" id="field_tickets"
+                    ng-model="vm.thb_plays.tickets"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.prizeHigh" for="field_prizeHigh">Prize High</label>
+            <input type="text" class="form-control" name="prizeHigh" id="field_prizeHigh"
+                    ng-model="vm.thb_plays.prizeHigh"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.prizeLow" for="field_prizeLow">Prize Low</label>
+            <input type="number" class="form-control" name="prizeLow" id="field_prizeLow"
+                    ng-model="vm.thb_plays.prizeLow"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.coeficient" for="field_coeficient">Coeficient</label>
+            <input type="number" class="form-control" name="coeficient" id="field_coeficient"
+                    ng-model="vm.thb_plays.coeficient"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.spent" for="field_spent">Spent</label>
+            <input type="number" class="form-control" name="spent" id="field_spent"
+                    ng-model="vm.thb_plays.spent"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.prizeFreq" for="field_prizeFreq">Prize Freq</label>
+            <input type="number" class="form-control" name="prizeFreq" id="field_prizeFreq"
+                    ng-model="vm.thb_plays.prizeFreq"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.thb_plays.balanse" for="field_balanse">Balanse</label>
+            <input type="number" class="form-control" name="balanse" id="field_balanse"
+                    ng-model="vm.thb_plays.balanse"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
