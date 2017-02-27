@@ -93,9 +93,24 @@ Then run:
 
 For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`yo jhipster:docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
 
+## Trouble shooting 
+
+In case if all Karma test fail run:
+    npm install
+Then, run:
+     rm -r src/main/webapp/bower_components
+Then, run:
+     bower install
+run:
+     gulp install
+run:
+     gulp test
+ 
 ## Continuous Integration (optional)
 
 To set up a CI environment, consult the [Setting up Continuous Integration][] page.
+
+
 
 [JHipster Homepage and latest documentation]: https://jhipster.github.io
 [JHipster 4.0.2 archive]: https://jhipster.github.io/documentation-archive/v4.0.2
