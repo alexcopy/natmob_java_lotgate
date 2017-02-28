@@ -6,7 +6,7 @@ spring:
     cloud:
         config:
             fail-fast: true
-            uri: http://redcopy:${jhipster.registry.password}@localhost:8761/config
+            uri: http://admin:${jhipster.registry.password}@localhost:8761/config
             # name of the config server's property source (file.yml) that we want to use
             name: natmob
             profile: dev # profile(s) of the property source
@@ -15,4 +15,4 @@ spring:
 
 jhipster:
     registry:
-        password: redcopy
+        password: admin
