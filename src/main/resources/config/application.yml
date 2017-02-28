@@ -84,7 +84,7 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: natmob@localhost
+        from: alexcopy@mail.ru
     swagger:
         default-include-pattern: /api/.*
         title: natmob API
