@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "4.0.6",
+    "jhipsterVersion": "4.0.2",
     "baseName": "natmob",
     "packageName": "ru.m2mcom.natmob",
     "packageFolder": "ru/m2mcom/natmob",
