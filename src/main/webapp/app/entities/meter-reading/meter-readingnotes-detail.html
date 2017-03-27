@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="natmobApp.meterReading.detail.title">Meter Reading</span> {{vm.meterReading.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="natmobApp.meterReading.readingDate">Reading Date</span></dt>
+        <dd>
+            <span>{{vm.meterReading.readingDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.meterReading.description">Description</span></dt>
+        <dd>
+            <span>{{vm.meterReading.description}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.meterReading.reading">Reading</span></dt>
+        <dd>
+            <span>{{vm.meterReading.reading}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.meterReading.tempVal">Temp Val</span></dt>
+        <dd>
+            <span>{{vm.meterReading.tempVal}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="meter-readingnotes-detail.edit({id:vm.meterReading.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="natmobApp.waterChange.detail.title">Water Change</span> {{vm.waterChange.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="natmobApp.waterChange.changeDate">Change Date</span></dt>
+        <dd>
+            <span>{{vm.waterChange.changeDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.waterChange.description">Description</span></dt>
+        <dd>
+            <span>{{vm.waterChange.description}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.waterChange.readingBefore">Reading Before</span></dt>
+        <dd>
+            <span>{{vm.waterChange.readingBefore}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.waterChange.readingAfter">Reading After</span></dt>
+        <dd>
+            <span>{{vm.waterChange.readingAfter}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.waterChange.tempVal">Temp Val</span></dt>
+        <dd>
+            <span>{{vm.waterChange.tempVal}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.waterChange.timestamp">Timestamp</span></dt>
+        <dd>
+            <span>{{vm.waterChange.timestamp}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.waterChange.tank">Tank</span></dt>
+        <dd>
+            <a ui-sref="tanknotes-detail({id:vm.waterChange.tank.id})">{{vm.waterChange.tank.tankName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="water-changenotes-detail.edit({id:vm.waterChange.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

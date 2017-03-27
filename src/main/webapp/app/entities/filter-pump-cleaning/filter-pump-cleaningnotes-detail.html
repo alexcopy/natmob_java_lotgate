@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="natmobApp.filterPumpCleaning.detail.title">Filter Pump Cleaning</span> {{vm.filterPumpCleaning.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="natmobApp.filterPumpCleaning.cleaningDate">Cleaning Date</span></dt>
+        <dd>
+            <span>{{vm.filterPumpCleaning.cleaningDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.filterPumpCleaning.description">Description</span></dt>
+        <dd>
+            <span>{{vm.filterPumpCleaning.description}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.filterPumpCleaning.tempVal">Temp Val</span></dt>
+        <dd>
+            <span>{{vm.filterPumpCleaning.tempVal}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.filterPumpCleaning.timestamp">Timestamp</span></dt>
+        <dd>
+            <span>{{vm.filterPumpCleaning.timestamp}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="filter-pump-cleaningnotes-detail.edit({id:vm.filterPumpCleaning.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

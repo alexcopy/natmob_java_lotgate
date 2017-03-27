@@ -15,6 +15,17 @@
                 "emlPlays": "Eml Plays",
                 "natPlays": "Nat Plays",
                 "thbPlays": "Thb Plays",
+                "locationnotes": "Location",
+                "tanknotes": "Tank",
+                "devicenotes": "Device",
+                "tempMeternotes": "Temp Meter",
+                "meterReadingnotes": "Meter Reading",
+                "filterPumpCleaningnotes": "Filter Pump Cleaning",
+                "waterChangenotes": "Water Change",
+                "liveStocknotes": "Live Stock",
+                "chemicalAnalysisnotes": "Chemical Analysis",
+                "chemicalsnotes": "Chemicals",
+                "otherWorksnotes": "Other Works",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
