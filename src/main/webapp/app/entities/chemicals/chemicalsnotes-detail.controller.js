@@ -5,9 +5,9 @@
         .module('natmobApp')
         .controller('ChemicalsNotesDetailController', ChemicalsNotesDetailController);
 
-    ChemicalsNotesDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Chemicals'];
+    ChemicalsNotesDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Chemicals', 'Tank'];
 
-    function ChemicalsNotesDetailController($scope, $rootScope, $stateParams, previousState, entity, Chemicals) {
+    function ChemicalsNotesDetailController($scope, $rootScope, $stateParams, previousState, entity, Chemicals, Tank) {
         var vm = this;
 
         vm.chemicals = entity;

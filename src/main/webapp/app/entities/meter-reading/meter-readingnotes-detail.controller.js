@@ -5,9 +5,9 @@
         .module('natmobApp')
         .controller('MeterReadingNotesDetailController', MeterReadingNotesDetailController);
 
-    MeterReadingNotesDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'MeterReading'];
+    MeterReadingNotesDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'MeterReading', 'Tank'];
 
-    function MeterReadingNotesDetailController($scope, $rootScope, $stateParams, previousState, entity, MeterReading) {
+    function MeterReadingNotesDetailController($scope, $rootScope, $stateParams, previousState, entity, MeterReading, Tank) {
         var vm = this;
 
         vm.meterReading = entity;

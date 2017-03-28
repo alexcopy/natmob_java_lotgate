@@ -14,13 +14,7 @@
         </dd>
         <dt><span data-translate="natmobApp.tempMeter.tank">Tank</span></dt>
         <dd>
-            <span>{{vm.tempMeter.tank}}</span>
-        </dd>
-        <dt><span data-translate="natmobApp.tempMeter.tank">Tank</span></dt>
-        <dd>
-            <span ng-repeat="tank in vm.tempMeter.tanks">
-                <a ui-sref="tanknotes-detail({id: tank.id})">{{tank.tankName}}</a>{{$last ? '' : ', '}}
-            </span>
+            <a ui-sref="tanknotes-detail({id:vm.tempMeter.tank.id})">{{vm.tempMeter.tank.tankName}}</a>
         </dd>
     </dl>
 

@@ -5,9 +5,9 @@
         .module('natmobApp')
         .controller('OtherWorksNotesDetailController', OtherWorksNotesDetailController);
 
-    OtherWorksNotesDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'OtherWorks'];
+    OtherWorksNotesDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'OtherWorks', 'Tank'];
 
-    function OtherWorksNotesDetailController($scope, $rootScope, $stateParams, previousState, entity, OtherWorks) {
+    function OtherWorksNotesDetailController($scope, $rootScope, $stateParams, previousState, entity, OtherWorks, Tank) {
         var vm = this;
 
         vm.otherWorks = entity;

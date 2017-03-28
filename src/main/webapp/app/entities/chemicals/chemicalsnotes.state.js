@@ -128,7 +128,6 @@
                                 qty: null,
                                 reason: null,
                                 tempVal: null,
-                                timestamp: null,
                                 id: null
                             };
                         }

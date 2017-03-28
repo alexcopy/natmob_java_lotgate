@@ -5,9 +5,9 @@
         .module('natmobApp')
         .controller('FilterPumpCleaningNotesDialogController', FilterPumpCleaningNotesDialogController);
 
-    FilterPumpCleaningNotesDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'FilterPumpCleaning'];
+    FilterPumpCleaningNotesDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'FilterPumpCleaning', 'Device'];
 
-    function FilterPumpCleaningNotesDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, FilterPumpCleaning) {
+    function FilterPumpCleaningNotesDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, FilterPumpCleaning, Device) {
         var vm = this;
 
         vm.filterPumpCleaning = entity;
@@ -15,6 +15,7 @@
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
+        vm.devices = Device.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

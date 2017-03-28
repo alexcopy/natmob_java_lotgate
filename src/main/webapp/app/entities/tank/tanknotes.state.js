@@ -109,8 +109,6 @@
                                 tankName: null,
                                 tankType: null,
                                 description: null,
-                                timestamp: null,
-                                userId: null,
                                 id: null
                             };
                         }

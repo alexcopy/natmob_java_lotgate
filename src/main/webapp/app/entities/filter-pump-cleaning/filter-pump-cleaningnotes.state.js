@@ -127,7 +127,6 @@
                                 cleaningDate: null,
                                 description: null,
                                 tempVal: null,
-                                timestamp: null,
                                 id: null
                             };
                         }

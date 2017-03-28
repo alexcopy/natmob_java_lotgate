@@ -109,7 +109,6 @@
                                 deviceName: null,
                                 deviceType: null,
                                 description: null,
-                                tank: null,
                                 id: null
                             };
                         }

@@ -5,9 +5,9 @@
         .module('natmobApp')
         .controller('FilterPumpCleaningNotesDetailController', FilterPumpCleaningNotesDetailController);
 
-    FilterPumpCleaningNotesDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'FilterPumpCleaning'];
+    FilterPumpCleaningNotesDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'FilterPumpCleaning', 'Device'];
 
-    function FilterPumpCleaningNotesDetailController($scope, $rootScope, $stateParams, previousState, entity, FilterPumpCleaning) {
+    function FilterPumpCleaningNotesDetailController($scope, $rootScope, $stateParams, previousState, entity, FilterPumpCleaning, Device) {
         var vm = this;
 
         vm.filterPumpCleaning = entity;

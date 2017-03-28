@@ -2,12 +2,10 @@
     "fluentMethods": true,
     "relationships": [
         {
-            "relationshipType": "many-to-many",
-            "otherEntityRelationshipName": "",
+            "relationshipType": "many-to-one",
             "relationshipName": "tank",
             "otherEntityName": "tank",
-            "otherEntityField": "tankName",
-            "ownerSide": true
+            "otherEntityField": "tankName"
         }
     ],
     "fields": [
@@ -21,13 +19,9 @@
             "fieldValidateRules": [
                 "required"
             ]
-        },
-        {
-            "fieldName": "tank",
-            "fieldType": "String"
         }
     ],
-    "changelogDate": "20170326000434",
+    "changelogDate": "20170327173548",
     "dto": "no",
     "service": "serviceImpl",
     "entityTableName": "temp_meter",

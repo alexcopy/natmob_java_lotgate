@@ -40,7 +40,7 @@
                     <th jh-sort-by="qty"><span data-translate="natmobApp.chemicals.qty">Qty</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="reason"><span data-translate="natmobApp.chemicals.reason">Reason</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="tempVal"><span data-translate="natmobApp.chemicals.tempVal">Temp Val</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="timestamp"><span data-translate="natmobApp.chemicals.timestamp">Timestamp</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tank.tankName"><span data-translate="natmobApp.chemicals.tank">Tank</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -51,7 +51,9 @@
                     <td>{{chemicals.qty}}</td>
                     <td>{{chemicals.reason}}</td>
                     <td>{{chemicals.tempVal}}</td>
-                    <td>{{chemicals.timestamp}}</td>
+                    <td>
+                        <a ui-sref="tanknotes-detail({id:chemicals.tank.id})">{{chemicals.tank.tankName}}</a>
+                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

@@ -28,15 +28,9 @@
         <dd>
             <span>{{vm.chemicalAnalysis.tempVal}}</span>
         </dd>
-        <dt><span data-translate="natmobApp.chemicalAnalysis.timestamp">Timestamp</span></dt>
-        <dd>
-            <span>{{vm.chemicalAnalysis.timestamp}}</span>
-        </dd>
         <dt><span data-translate="natmobApp.chemicalAnalysis.tank">Tank</span></dt>
         <dd>
-            <span ng-repeat="tank in vm.chemicalAnalysis.tanks">
-                <a ui-sref="tanknotes-detail({id: tank.id})">{{tank.tankName}}</a>{{$last ? '' : ', '}}
-            </span>
+            <a ui-sref="tanknotes-detail({id:vm.chemicalAnalysis.tank.id})">{{vm.chemicalAnalysis.tank.tankName}}</a>
         </dd>
     </dl>
 

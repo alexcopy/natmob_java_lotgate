@@ -16,7 +16,8 @@
             "readingDate": "Reading Date",
             "description": "Description",
             "reading": "Reading",
-            "tempVal": "Temp Val"
+            "tempVal": "Temp Val",
+            "tank": "Tank"
         }
     },
     "pondNotesApp": {

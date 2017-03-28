@@ -20,9 +20,9 @@
         <dd>
             <span>{{vm.chemicals.tempVal}}</span>
         </dd>
-        <dt><span data-translate="natmobApp.chemicals.timestamp">Timestamp</span></dt>
+        <dt><span data-translate="natmobApp.chemicals.tank">Tank</span></dt>
         <dd>
-            <span>{{vm.chemicals.timestamp}}</span>
+            <a ui-sref="tanknotes-detail({id:vm.chemicals.tank.id})">{{vm.chemicals.tank.tankName}}</a>
         </dd>
     </dl>
 

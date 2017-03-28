@@ -27,22 +27,14 @@
         {
             "fieldName": "description",
             "fieldType": "String"
-        },
-        {
-            "fieldName": "timestamp",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "userId",
-            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20170327173548",
-    "entityTableName": "tank",
     "dto": "no",
-    "pagination": "no",
     "service": "serviceImpl",
+    "entityTableName": "tank",
+    "pagination": "no",
+    "angularJSSuffix": "notes",
     "microserviceName": "pondNotes",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "notes"
+    "searchEngine": "elasticsearch"
 }

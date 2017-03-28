@@ -106,7 +106,6 @@
                             return {
                                 readingDate: null,
                                 tempVal: null,
-                                tank: null,
                                 id: null
                             };
                         }

@@ -109,7 +109,6 @@
                                 qty: null,
                                 descripton: null,
                                 tempVal: null,
-                                timestamp: null,
                                 id: null
                             };
                         }

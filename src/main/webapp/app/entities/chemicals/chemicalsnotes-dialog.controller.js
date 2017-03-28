@@ -5,9 +5,9 @@
         .module('natmobApp')
         .controller('ChemicalsNotesDialogController', ChemicalsNotesDialogController);
 
-    ChemicalsNotesDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Chemicals'];
+    ChemicalsNotesDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Chemicals', 'Tank'];
 
-    function ChemicalsNotesDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Chemicals) {
+    function ChemicalsNotesDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Chemicals, Tank) {
         var vm = this;
 
         vm.chemicals = entity;
@@ -15,6 +15,7 @@
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
+        vm.tanks = Tank.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

@@ -18,7 +18,7 @@
             "qty": "Qty",
             "descripton": "Descripton",
             "tempVal": "Temp Val",
-            "timestamp": "Timestamp"
+            "tank": "Tank"
         }
     },
     "pondNotesApp": {

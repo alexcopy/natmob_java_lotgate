@@ -109,7 +109,6 @@
                                 readingBefore: null,
                                 readingAfter: null,
                                 tempVal: null,
-                                timestamp: null,
                                 id: null
                             };
                         }

@@ -5,9 +5,9 @@
         .module('natmobApp')
         .controller('OtherWorksNotesDialogController', OtherWorksNotesDialogController);
 
-    OtherWorksNotesDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'OtherWorks'];
+    OtherWorksNotesDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'OtherWorks', 'Tank'];
 
-    function OtherWorksNotesDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, OtherWorks) {
+    function OtherWorksNotesDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, OtherWorks, Tank) {
         var vm = this;
 
         vm.otherWorks = entity;
@@ -15,6 +15,7 @@
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
+        vm.tanks = Tank.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

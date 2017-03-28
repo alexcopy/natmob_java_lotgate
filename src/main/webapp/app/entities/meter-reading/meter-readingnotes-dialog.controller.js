@@ -5,9 +5,9 @@
         .module('natmobApp')
         .controller('MeterReadingNotesDialogController', MeterReadingNotesDialogController);
 
-    MeterReadingNotesDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'MeterReading'];
+    MeterReadingNotesDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'MeterReading', 'Tank'];
 
-    function MeterReadingNotesDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, MeterReading) {
+    function MeterReadingNotesDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, MeterReading, Tank) {
         var vm = this;
 
         vm.meterReading = entity;
@@ -15,6 +15,7 @@
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
+        vm.tanks = Tank.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

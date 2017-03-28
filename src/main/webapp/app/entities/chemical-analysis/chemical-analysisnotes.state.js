@@ -130,7 +130,6 @@
                                 nH4: null,
                                 ph: null,
                                 tempVal: null,
-                                timestamp: null,
                                 id: null
                             };
                         }

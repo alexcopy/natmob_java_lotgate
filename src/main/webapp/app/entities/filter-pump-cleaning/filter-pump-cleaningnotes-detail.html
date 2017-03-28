@@ -16,9 +16,9 @@
         <dd>
             <span>{{vm.filterPumpCleaning.tempVal}}</span>
         </dd>
-        <dt><span data-translate="natmobApp.filterPumpCleaning.timestamp">Timestamp</span></dt>
+        <dt><span data-translate="natmobApp.filterPumpCleaning.device">Device</span></dt>
         <dd>
-            <span>{{vm.filterPumpCleaning.timestamp}}</span>
+            <a ui-sref="devicenotes-detail({id:vm.filterPumpCleaning.device.id})">{{vm.filterPumpCleaning.device.deviceName}}</a>
         </dd>
     </dl>
 

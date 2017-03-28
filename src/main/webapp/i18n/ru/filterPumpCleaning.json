@@ -16,7 +16,7 @@
             "cleaningDate": "Cleaning Date",
             "description": "Description",
             "tempVal": "Temp Val",
-            "timestamp": "Timestamp"
+            "device": "Device"
         }
     },
     "pondNotesApp": {

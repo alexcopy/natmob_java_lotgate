@@ -24,9 +24,9 @@
         <dd>
             <span>{{vm.otherWorks.tempVal}}</span>
         </dd>
-        <dt><span data-translate="natmobApp.otherWorks.timestamp">Timestamp</span></dt>
+        <dt><span data-translate="natmobApp.otherWorks.tank">Tank</span></dt>
         <dd>
-            <span>{{vm.otherWorks.timestamp}}</span>
+            <a ui-sref="tanknotes-detail({id:vm.otherWorks.tank.id})">{{vm.otherWorks.tank.tankName}}</a>
         </dd>
     </dl>
 

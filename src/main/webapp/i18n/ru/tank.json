@@ -16,8 +16,6 @@
             "tankName": "Tank Name",
             "tankType": "Tank Type",
             "description": "Description",
-            "timestamp": "Timestamp",
-            "userId": "User Id",
             "location": "Location"
         }
     },

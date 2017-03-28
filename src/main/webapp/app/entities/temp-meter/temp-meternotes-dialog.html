@@ -39,16 +39,12 @@
                 </p>
             </div>
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="natmobApp.tempMeter.tank" for="field_tank">Tank</label>
-            <input type="text" class="form-control" name="tank" id="field_tank"
-                    ng-model="vm.tempMeter.tank"
-                    />
-        </div>
 
         <div class="form-group">
             <label data-translate="natmobApp.tempMeter.tank" for="field_tank">Tank</label>
-            <select class="form-control" id="field_tank" multiple name="tank" ng-model="vm.tempMeter.tanks" ng-options="tank as tank.tankName for tank in vm.tanks track by tank.id"></select>
+            <select class="form-control" id="field_tank" name="tank" ng-model="vm.tempMeter.tank" ng-options="tank as tank.tankName for tank in vm.tanks track by tank.id">
+                <option value=""></option>
+            </select>
         </div>
     </div>
     <div class="modal-footer">
