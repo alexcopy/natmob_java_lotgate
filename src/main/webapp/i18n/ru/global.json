@@ -9,12 +9,6 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Сущности",
-                "emlHistory": "Eml History",
-                "natHistory": "Nat History",
-                "thbHistory": "Thb History",
-                "emlPlays": "Eml Plays",
-                "natPlays": "Nat Plays",
-                "thbPlays": "Thb Plays",
                 "locationnotes": "Location",
                 "tanknotes": "Tank",
                 "devicenotes": "Device",
@@ -26,8 +20,6 @@
                 "chemicalAnalysisnotes": "Chemical Analysis",
                 "chemicalsnotes": "Chemicals",
                 "otherWorksnotes": "Other Works",
-                "emlHistorylotapp": "Eml History",
-                "natHistorylotapp": "Nat History",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
