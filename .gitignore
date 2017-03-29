@@ -140,8 +140,3 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
-
-/src/main/resources/config/application-dev.yml
-/src/main/resources/config/application-prod.yml
-/src/main/docker/central-server-config/localhost-config/application.yml
-src/main/docker/central-server-config/docker-config/application.yml
