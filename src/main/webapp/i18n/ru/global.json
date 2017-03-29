@@ -26,6 +26,8 @@
                 "chemicalAnalysisnotes": "Chemical Analysis",
                 "chemicalsnotes": "Chemicals",
                 "otherWorksnotes": "Other Works",
+                "emlHistorylotapp": "Eml History",
+                "natHistorylotapp": "Nat History",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

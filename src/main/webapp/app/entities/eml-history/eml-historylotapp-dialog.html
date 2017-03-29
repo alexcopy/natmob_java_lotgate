@@ -1,0 +1,84 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEmlHistoryLabel" data-translate="natmobApp.emlHistory.home.createOrEditLabel">Create or edit a Eml History</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.emlHistory.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.emlHistory.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.emlHistory.drawDate" for="field_drawDate">Draw Date</label>
+                <div class="input-group">
+                    <input id="field_drawDate" type="text" class="form-control" name="drawDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.emlHistory.drawDate" is-open="vm.datePickerOpenStatus.drawDate"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('drawDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.drawDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.drawDate.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.emlHistory.ball1" for="field_ball1">Ball 1</label>
+            <input type="number" class="form-control" name="ball1" id="field_ball1"
+                    ng-model="vm.emlHistory.ball1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.emlHistory.ball2" for="field_ball2">Ball 2</label>
+            <input type="number" class="form-control" name="ball2" id="field_ball2"
+                    ng-model="vm.emlHistory.ball2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.emlHistory.ball3" for="field_ball3">Ball 3</label>
+            <input type="number" class="form-control" name="ball3" id="field_ball3"
+                    ng-model="vm.emlHistory.ball3"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.emlHistory.ball4" for="field_ball4">Ball 4</label>
+            <input type="number" class="form-control" name="ball4" id="field_ball4"
+                    ng-model="vm.emlHistory.ball4"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.emlHistory.ball5" for="field_ball5">Ball 5</label>
+            <input type="number" class="form-control" name="ball5" id="field_ball5"
+                    ng-model="vm.emlHistory.ball5"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.emlHistory.luckyStar1" for="field_luckyStar1">Lucky Star 1</label>
+            <input type="number" class="form-control" name="luckyStar1" id="field_luckyStar1"
+                    ng-model="vm.emlHistory.luckyStar1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="natmobApp.emlHistory.luckyStar2" for="field_luckyStar2">Lucky Star 2</label>
+            <input type="number" class="form-control" name="luckyStar2" id="field_luckyStar2"
+                    ng-model="vm.emlHistory.luckyStar2"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

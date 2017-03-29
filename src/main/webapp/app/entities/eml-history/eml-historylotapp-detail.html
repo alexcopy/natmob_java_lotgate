@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="natmobApp.emlHistory.detail.title">Eml History</span> {{vm.emlHistory.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="natmobApp.emlHistory.drawDate">Draw Date</span></dt>
+        <dd>
+            <span>{{vm.emlHistory.drawDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.emlHistory.ball1">Ball 1</span></dt>
+        <dd>
+            <span>{{vm.emlHistory.ball1}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.emlHistory.ball2">Ball 2</span></dt>
+        <dd>
+            <span>{{vm.emlHistory.ball2}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.emlHistory.ball3">Ball 3</span></dt>
+        <dd>
+            <span>{{vm.emlHistory.ball3}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.emlHistory.ball4">Ball 4</span></dt>
+        <dd>
+            <span>{{vm.emlHistory.ball4}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.emlHistory.ball5">Ball 5</span></dt>
+        <dd>
+            <span>{{vm.emlHistory.ball5}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.emlHistory.luckyStar1">Lucky Star 1</span></dt>
+        <dd>
+            <span>{{vm.emlHistory.luckyStar1}}</span>
+        </dd>
+        <dt><span data-translate="natmobApp.emlHistory.luckyStar2">Lucky Star 2</span></dt>
+        <dd>
+            <span>{{vm.emlHistory.luckyStar2}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="eml-historylotapp-detail.edit({id:vm.emlHistory.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
