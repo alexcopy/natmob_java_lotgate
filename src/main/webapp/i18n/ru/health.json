@@ -17,7 +17,8 @@
             "hystrix": "Hystrix",
             "diskSpace": "Место на диске",
             "mail": "Email",
-            "mongo": "MongoDB"
+            "elasticsearch": "Elasticsearch",
+            "db": "База данных"
         },
         "table": {
             "service": "Название сервиса",

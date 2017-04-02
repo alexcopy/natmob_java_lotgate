@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-KEYSPACE_NAME=natmob
+KEYSPACE_NAME=gatemicro
 
 unset scripts
 declare -A scripts

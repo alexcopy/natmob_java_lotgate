@@ -1,25 +1,12 @@
 {
     "global": {
-        "title": "Natmob",
+        "title": "Gatemicro",
         "browsehappy": "Ваш браузер <strong>устарел</strong>. Пожалуйста <a href=\"http://browsehappy.com/?locale=ru\">обновите ваш браузер</a>.",
         "menu": {
             "home": "Главная",
-            "history": "History",
-            "faq": "Faq",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Сущности",
-                "locationnotes": "Location",
-                "tanknotes": "Tank",
-                "devicenotes": "Device",
-                "tempMeternotes": "Temp Meter",
-                "meterReadingnotes": "Meter Reading",
-                "filterPumpCleaningnotes": "Filter Pump Cleaning",
-                "waterChangenotes": "Water Change",
-                "liveStocknotes": "Live Stock",
-                "chemicalAnalysisnotes": "Chemical Analysis",
-                "chemicalsnotes": "Chemicals",
-                "otherWorksnotes": "Other Works",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -59,8 +46,15 @@
         },
         "messages": {
             "info": {
-                "authenticated": "Если вы хотите <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">авторизироваться</a>, вы можете попробовать аккаунты по умолчанию:<br/>- Администратор (логин=\"admin\" и пароль=\"admin\") <br/>- Пользователь (логин=\"user\" и пароль=\"user\").",
-                "register": "У вас нет аккаунта? <a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">Создать новый аккаунт</a>"
+                "authenticated": {
+                    "prefix": "Если вы хотите ",
+                    "link": "авторизироваться",
+                    "suffix": ", вы можете попробовать аккаунты по умолчанию:<br/>- Администратор (логин=\"admin\" и пароль=\"admin\") <br/>- Пользователь (логин=\"user\" и пароль=\"user\")."
+                },
+                "register": {
+                    "noaccount": "У вас нет аккаунта?",
+                    "link": "Создать новый аккаунт"
+                }
             },
             "error": {
                 "dontmatch": "Пароль и его подтверждение не совпадают!"
@@ -86,10 +80,10 @@
             }
         },
         "field": {
-            "id": "ID"
+            "id" : "ID"
         },
         "ribbon": {
-            "dev": "Development"
+            "dev":"Development"
         }
     },
     "entity": {
@@ -125,6 +119,7 @@
         }
     },
     "error": {
+        "internalServerError": "Internal server error",
         "server.not.reachable": "Сервер не доступен",
         "url.not.found": "Not found",
         "NotNull": "Поле {{fieldName}} не может быть пустым!",
@@ -133,8 +128,5 @@
         "emailexists": "Эл. почта уже используется!!",
         "idexists": "Новый {{entityName}} не может иметь данный ID"
     },
-    "footer": "Это ваш футтер",
-    "bootswatch": {
-        "themeSelector": "Theme"
-    }
+    "footer": "Это ваш футтер"
 }

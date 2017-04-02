@@ -1,23 +1,28 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "4.0.2",
-    "baseName": "natmob",
-    "packageName": "ru.m2mcom.natmob",
-    "packageFolder": "ru/m2mcom/natmob",
+    "promptValues": {
+      "packageName": "ru.m2mcom.gateway",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "4.1.1",
+    "baseName": "gatemicro",
+    "packageName": "ru.m2mcom.gateway",
+    "packageFolder": "ru/m2mcom/gateway",
     "serverPort": "8080",
     "authenticationType": "jwt",
-    "hibernateCache": "no",
+    "hibernateCache": "hazelcast",
     "clusteredHttpSession": "hazelcast",
-    "websocket": false,
-    "databaseType": "mongodb",
-    "devDatabaseType": "mongodb",
-    "prodDatabaseType": "mongodb",
-    "searchEngine": false,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
     "messageBroker": false,
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSocialSignIn": false,
-    "jwtSecretKey": "997828774e09e7fdc9fa3b5301f3e5c9ca55dc73",
+    "jwtSecretKey": "6d9ba71ac97df98c2ee2312dfad0605e722b16cb",
+    "clientFramework": "angular2",
     "useSass": false,
     "clientPackageManager": "yarn",
     "applicationType": "gateway",
@@ -30,7 +35,6 @@
     "languages": [
       "en",
       "ru"
-    ],
-    "clientFramework": "angular1"
+    ]
   }
 }

@@ -1,27 +1,22 @@
 version: '2'
 services:
-    natmob-cassandra:
-        container_name: natmob-cassandra
+    gatemicro-cassandra:
         image: cassandra:3.9
         # volumes:
-        #     - ~/volumes/jhipster/natmob/cassandra/:/var/lib/cassandra/data
+        #     - ~/volumes/jhipster/gatemicro/cassandra/:/var/lib/cassandra/data
         ports:
             - 7000:7000
             - 7001:7001
             - 7199:7199
             - 9042:9042
             - 9160:9160
-    natmob-cassandra-node:
+    gatemicro-cassandra-node:
         image: cassandra:3.9
-        links:
-            - natmob-cassandra:seed
         environment:
-            - CASSANDRA_SEEDS=seed
-    natmob-cassandra-migration:
+            - CASSANDRA_SEEDS=gatemicro-cassandra
+    gatemicro-cassandra-migration:
         extends:
             file: cassandra-migration.yml
-            service: natmob-cassandra-migration
-        links:
-            - natmob-cassandra
+            service: gatemicro-cassandra-migration
         environment:
             - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql

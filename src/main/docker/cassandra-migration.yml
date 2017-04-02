@@ -1,9 +1,8 @@
 version: '2'
 services:
-    natmob-cassandra-migration:
-        container_name: natmob-cassandra-migration
+    gatemicro-cassandra-migration:
         environment:
-            - CASSANDRA_CONTACT_POINT=natmob-cassandra
+            - CASSANDRA_CONTACT_POINT=gatemicro-cassandra
             - USER=docker-cassandra-migration
             # - DEBUG_LOG=1 # uncomment to show debug logs during the migration process
         build:

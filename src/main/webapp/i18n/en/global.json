@@ -1,25 +1,12 @@
 {
     "global": {
-        "title": "Natmob",
+        "title": "Gatemicro",
         "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
         "menu": {
             "home": "Home",
-            "history": "History",
-            "faq": "Faq",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
-                "locationnotes": "Location",
-                "tanknotes": "Tank",
-                "devicenotes": "Device",
-                "tempMeternotes": "Temp Meter",
-                "meterReadingnotes": "Meter Reading",
-                "filterPumpCleaningnotes": "Filter Pump Cleaning",
-                "waterChangenotes": "Water Change",
-                "liveStocknotes": "Live Stock",
-                "chemicalAnalysisnotes": "Chemical Analysis",
-                "chemicalsnotes": "Chemicals",
-                "otherWorksnotes": "Other Works",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -59,8 +46,15 @@
         },
         "messages": {
             "info": {
-                "authenticated": "If you want to <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">sign in</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
-                "register": "You don't have an account yet? <a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">Register a new account</a>"
+                "authenticated": {
+                    "prefix": "If you want to ",
+                    "link": "sign in",
+                    "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
+                },
+                "register": {
+                    "noaccount": "You don't have an account yet?",
+                    "link": "Register a new account"
+                }
             },
             "error": {
                 "dontmatch": "The password and its confirmation do not match!"
@@ -89,7 +83,7 @@
             "id": "ID"
         },
         "ribbon": {
-            "dev": "Development"
+            "dev":"Development"
         }
     },
     "entity": {
@@ -125,6 +119,7 @@
         }
     },
     "error": {
+        "internalServerError": "Internal server error",
         "server.not.reachable": "Server not reachable",
         "url.not.found": "Not found",
         "NotNull": "Field {{ fieldName }} cannot be empty!",
@@ -133,8 +128,5 @@
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{ entityName }} cannot already have an ID"
     },
-    "footer": "This is your footer",
-    "bootswatch": {
-        "themeSelector": "Theme"
-    }
+    "footer": "This is your footer"
 }

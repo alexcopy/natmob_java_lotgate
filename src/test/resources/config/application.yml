@@ -17,21 +17,41 @@ eureka:
     client:
         enabled: false
     instance:
-        appname: natmob
-        instanceId: natmob:${spring.application.instance_id:${random.value}}
+        appname: gatemicro
+        instanceId: gatemicro:${spring.application.instance-id:${random.value}}
 
 spring:
     application:
-        name: natmob
+        name: gatemicro
     autoconfigure:
         exclude: org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration, org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration
     jackson:
         serialization.write_dates_as_timestamps: false
+    cache:
+        type: none
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:h2:mem:gatemicro;DB_CLOSE_DELAY=-1
+        name:
+        username:
+        password:
+    jpa:
+        database-platform: io.github.jhipster.domain.util.FixedH2Dialect
+        database: H2
+        open-in-view: false
+        show-sql: false
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+                implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        properties:
+            hibernate.id.new_generator_mappings: true
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate
     data:
-        mongodb:
-            host: localhost
-            port: 27117
-            database: natmob
         cassandra:
             contactPoints: localhost
             port: 0
@@ -40,8 +60,17 @@ spring:
             keyspaceName: cassandra_unit_keyspace
             repositories:
                 enabled: false
+        elasticsearch:
+            cluster-name:
+            cluster-nodes:
+            properties:
+                path:
+                  logs: target/elasticsearch/log
+                  data: target/elasticsearch/data
     mail:
         host: localhost
+    messages:
+        basename: i18n/messages
     mvc:
         favicon:
             enabled: false
@@ -67,13 +96,13 @@ server:
 
 jhipster:
     async:
-        core-pool-size: 2
+        core-pool-size: 1
         max-pool-size: 50
         queue-capacity: 10000
     security:
         authentication:
             jwt:
-                secret: 997828774e09e7fdc9fa3b5301f3e5c9ca55dc73
+                secret: 6d9ba71ac97df98c2ee2312dfad0605e722b16cb
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
