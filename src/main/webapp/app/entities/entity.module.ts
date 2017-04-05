@@ -16,6 +16,8 @@ import { GatemicroGameLotmicroModule } from './game/game-lotmicro.module';
 import { GatemicroGameRuleLotmicroModule } from './game-rule/game-rule-lotmicro.module';
 import { GatemicroLocalPlayLotmicroModule } from './local-play/local-play-lotmicro.module';
 import { GatemicroHistoryLotmicroModule } from './history/history-lotmicro.module';
+import { GatemicroTempMeterNotesModule } from './temp-meter/temp-meter-notes.module';
+import { GatemicroFilterPumpCleaningNotesModule } from './filter-pump-cleaning/filter-pump-cleaning-notes.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
@@ -36,6 +38,8 @@ import { GatemicroHistoryLotmicroModule } from './history/history-lotmicro.modul
         GatemicroGameRuleLotmicroModule,
         GatemicroLocalPlayLotmicroModule,
         GatemicroHistoryLotmicroModule,
+        GatemicroTempMeterNotesModule,
+        GatemicroFilterPumpCleaningNotesModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

@@ -23,6 +23,8 @@
                 "gameRuleLotmicro": "Game Rule",
                 "localPlayLotmicro": "Local Play",
                 "historyLotmicro": "History",
+                "tempMeterNotes": "Temp Meter",
+                "filterPumpCleaningNotes": "Filter Pump Cleaning",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

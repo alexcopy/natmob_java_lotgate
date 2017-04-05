@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "ru.m2mcom.gateway",
       "nativeLanguage": "en",
-      "microservicePath": "/Users/alexredko/Projects/jhipster/ru.m2mcom.natmob/lotmicro"
+      "microservicePath": "/Users/alexredko/Projects/jhipster/ru.m2mcom.natmob/pondNotes"
     },
     "jhipsterVersion": "4.1.1",
     "baseName": "gatemicro",
