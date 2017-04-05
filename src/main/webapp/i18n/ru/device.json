@@ -15,8 +15,7 @@
             },
             "deviceName": "Device Name",
             "deviceType": "Device Type",
-            "description": "Description",
-            "timestamp": "Timestamp"
+            "description": "Description"
         }
     },
     "pondNotesApp": {

@@ -25,24 +25,16 @@
             ]
         },
         {
-            "fieldName": "timestamp",
-            "fieldType": "Integer"
-        },
-        {
             "fieldName": "description",
             "fieldType": "String"
-        },
-        {
-            "fieldName": "userId",
-            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20170404150944",
-    "entityTableName": "other_works",
     "dto": "mapstruct",
-    "pagination": "no",
     "service": "serviceImpl",
+    "entityTableName": "other_works",
+    "pagination": "no",
+    "angularJSSuffix": "notes",
     "microserviceName": "pondNotes",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "notes"
+    "searchEngine": "elasticsearch"
 }

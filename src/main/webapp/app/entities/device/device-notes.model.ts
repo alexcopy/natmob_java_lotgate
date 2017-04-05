@@ -14,7 +14,6 @@ export class DeviceNotes {
         public deviceName?: string,
         public deviceType?: DeviceType,
         public description?: string,
-        public timestamp?: number,
     ) {
     }
 }

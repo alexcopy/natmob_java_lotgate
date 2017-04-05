@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Response } from '@angular/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
-import { EventManager, ParseLinks, PaginationUtil, JhiLanguageService, AlertService } from 'ng-jhipster';
+import { EventManager, ParseLinks, PaginationUtil, JhiLanguageService, AlertService, DataUtils } from 'ng-jhipster';
 
 import { ChemicalAnalysisNotes } from './chemical-analysis-notes.model';
 import { ChemicalAnalysisNotesService } from './chemical-analysis-notes.service';
@@ -38,6 +38,7 @@ currentAccount: any;
         private alertService: AlertService,
         private principal: Principal,
         private activatedRoute: ActivatedRoute,
+        private dataUtils: DataUtils,
         private router: Router,
         private eventManager: EventManager,
         private paginationUtil: PaginationUtil,
@@ -131,6 +132,13 @@ currentAccount: any;
 
 
 
+    byteSize(field) {
+        return this.dataUtils.byteSize(field);
+    }
+
+    openFile(contentType, field) {
+        return this.dataUtils.openFile(contentType, field);
+    }
     registerChangeInChemicalAnalyses() {
         this.eventSubscriber = this.eventManager.subscribe('chemicalAnalysisListModification', (response) => this.loadAll());
     }

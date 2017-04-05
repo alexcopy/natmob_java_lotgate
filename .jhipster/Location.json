@@ -26,18 +26,14 @@
             "fieldValidateRules": [
                 "required"
             ]
-        },
-        {
-            "fieldName": "timestamp",
-            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20170404150944",
-    "entityTableName": "location",
     "dto": "mapstruct",
-    "pagination": "no",
     "service": "serviceImpl",
+    "entityTableName": "location",
+    "pagination": "no",
+    "angularJSSuffix": "notes",
     "microserviceName": "pondNotes",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "notes"
+    "searchEngine": "elasticsearch"
 }

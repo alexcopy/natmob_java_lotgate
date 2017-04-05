@@ -15,8 +15,7 @@
             },
             "tankName": "Tank Name",
             "tankType": "Tank Type",
-            "description": "Description",
-            "timestamp": "Timestamp"
+            "description": "Description"
         }
     },
     "pondNotesApp": {

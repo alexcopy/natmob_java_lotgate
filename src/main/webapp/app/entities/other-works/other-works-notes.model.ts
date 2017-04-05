@@ -5,9 +5,7 @@ export class OtherWorksNotes {
         public reason?: string,
         public qty?: number,
         public tempVal?: number,
-        public timestamp?: number,
         public description?: string,
-        public userId?: number,
     ) {
     }
 }

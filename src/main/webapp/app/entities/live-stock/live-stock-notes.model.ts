@@ -15,8 +15,6 @@ export class LiveStockNotes {
         public description?: string,
         public qty?: number,
         public tempVal?: number,
-        public timestamp?: number,
-        public userId?: number,
     ) {
     }
 }

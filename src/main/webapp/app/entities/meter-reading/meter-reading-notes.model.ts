@@ -4,9 +4,7 @@ export class MeterReadingNotes {
         public readingDate?: any,
         public reading?: number,
         public tempVal?: number,
-        public timestamp?: number,
         public description?: string,
-        public userId?: number,
     ) {
     }
 }

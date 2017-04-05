@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Response } from '@angular/http';
 
 import { NgbActiveModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { EventManager, AlertService, JhiLanguageService } from 'ng-jhipster';
+import { EventManager, AlertService, JhiLanguageService, DataUtils } from 'ng-jhipster';
 
 import { ChemicalAnalysisNotes } from './chemical-analysis-notes.model';
 import { ChemicalAnalysisNotesPopupService } from './chemical-analysis-notes-popup.service';
@@ -21,6 +21,7 @@ export class ChemicalAnalysisNotesDialogComponent implements OnInit {
     constructor(
         public activeModal: NgbActiveModal,
         private jhiLanguageService: JhiLanguageService,
+        private dataUtils: DataUtils,
         private alertService: AlertService,
         private chemicalAnalysisService: ChemicalAnalysisNotesService,
         private eventManager: EventManager
@@ -31,6 +32,26 @@ export class ChemicalAnalysisNotesDialogComponent implements OnInit {
     ngOnInit() {
         this.isSaving = false;
         this.authorities = ['ROLE_USER', 'ROLE_ADMIN'];
+    }
+    byteSize(field) {
+        return this.dataUtils.byteSize(field);
+    }
+
+    openFile(contentType, field) {
+        return this.dataUtils.openFile(contentType, field);
+    }
+
+    setFileData($event, chemicalAnalysis, field, isImage) {
+        if ($event.target.files && $event.target.files[0]) {
+            let $file = $event.target.files[0];
+            if (isImage && !/^image\//.test($file.type)) {
+                return;
+            }
+            this.dataUtils.toBase64($file, (base64Data) => {
+                chemicalAnalysis[field] = base64Data;
+                chemicalAnalysis[`${field}ContentType`] = $file.type;
+            });
+        }
     }
     clear () {
         this.activeModal.dismiss('cancel');

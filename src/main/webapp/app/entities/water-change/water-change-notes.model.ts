@@ -6,8 +6,6 @@ export class WaterChangeNotes {
         public readingAfter?: number,
         public tempVal?: number,
         public description?: string,
-        public timestamp?: number,
-        public userId?: number,
     ) {
     }
 }

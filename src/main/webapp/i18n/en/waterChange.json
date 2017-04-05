@@ -17,9 +17,7 @@
             "readingBefore": "Reading Before",
             "readingAfter": "Reading After",
             "tempVal": "Temp Val",
-            "description": "Description",
-            "timestamp": "Timestamp",
-            "userId": "User Id"
+            "description": "Description"
         }
     },
     "pondNotesApp": {

@@ -19,9 +19,8 @@
             "nH4": "N H 4",
             "ph": "Ph",
             "tempVal": "Temp Val",
-            "timestamp": "Timestamp",
             "description": "Description",
-            "userId": "User Id"
+            "picture": "Picture"
         }
     },
     "pondNotesApp": {

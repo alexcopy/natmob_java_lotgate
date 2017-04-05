@@ -5,9 +5,7 @@ export class ChemicalsNotes {
         public qty?: number,
         public reason?: string,
         public tempVal?: number,
-        public timestamp?: number,
         public description?: string,
-        public userId?: number,
     ) {
     }
 }

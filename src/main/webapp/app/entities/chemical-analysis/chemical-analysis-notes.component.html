@@ -36,9 +36,8 @@
             <th jhiSortBy="nH4"><span jhiTranslate="gatemicroApp.chemicalAnalysis.nH4">N H 4</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="ph"><span jhiTranslate="gatemicroApp.chemicalAnalysis.ph">Ph</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="tempVal"><span jhiTranslate="gatemicroApp.chemicalAnalysis.tempVal">Temp Val</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="timestamp"><span jhiTranslate="gatemicroApp.chemicalAnalysis.timestamp">Timestamp</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="description"><span jhiTranslate="gatemicroApp.chemicalAnalysis.description">Description</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="userId"><span jhiTranslate="gatemicroApp.chemicalAnalysis.userId">User Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="picture"><span jhiTranslate="gatemicroApp.chemicalAnalysis.picture">Picture</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
@@ -51,9 +50,13 @@
                 <td>{{chemicalAnalysis.nH4}}</td>
                 <td>{{chemicalAnalysis.ph}}</td>
                 <td>{{chemicalAnalysis.tempVal}}</td>
-                <td>{{chemicalAnalysis.timestamp}}</td>
                 <td>{{chemicalAnalysis.description}}</td>
-                <td>{{chemicalAnalysis.userId}}</td>
+                <td>
+                    <a *ngIf="chemicalAnalysis.picture" (click)="openFile(chemicalAnalysis.pictureContentType, chemicalAnalysis.picture)">
+                        <img [src]="'data:' + chemicalAnalysis.pictureContentType + ';base64,' + chemicalAnalysis.picture" style="max-height: 30px;" alt="chemicalAnalysis image"/>
+                    </a>
+                    <span *ngIf="chemicalAnalysis.picture">{{chemicalAnalysis.pictureContentType}}, {{byteSize(chemicalAnalysis.picture)}}</span>
+                </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

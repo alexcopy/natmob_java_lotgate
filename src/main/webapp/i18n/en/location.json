@@ -16,8 +16,7 @@
             "streetAddress": "Street Address",
             "postalCode": "Postal Code",
             "city": "City",
-            "county": "County",
-            "timestamp": "Timestamp"
+            "county": "County"
         }
     },
     "pondNotesApp": {

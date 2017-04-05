@@ -33,7 +33,6 @@
             <th jhiSortBy="deviceName"><span jhiTranslate="gatemicroApp.device.deviceName">Device Name</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="deviceType"><span jhiTranslate="gatemicroApp.device.deviceType">Device Type</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="description"><span jhiTranslate="gatemicroApp.device.description">Description</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="timestamp"><span jhiTranslate="gatemicroApp.device.timestamp">Timestamp</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
@@ -43,7 +42,6 @@
                 <td>{{device.deviceName}}</td>
                 <td jhiTranslate="{{'gatemicroApp.DeviceType.' + device.deviceType}}">{{device.deviceType}}</td>
                 <td>{{device.description}}</td>
-                <td>{{device.timestamp}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

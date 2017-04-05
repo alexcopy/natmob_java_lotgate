@@ -25,24 +25,16 @@
             ]
         },
         {
-            "fieldName": "timestamp",
-            "fieldType": "Integer"
-        },
-        {
             "fieldName": "description",
             "fieldType": "String"
-        },
-        {
-            "fieldName": "userId",
-            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20170404150944",
-    "entityTableName": "chemicals",
     "dto": "mapstruct",
-    "pagination": "pagination",
     "service": "serviceImpl",
+    "entityTableName": "chemicals",
+    "pagination": "pagination",
+    "angularJSSuffix": "notes",
     "microserviceName": "pondNotes",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "notes"
+    "searchEngine": "elasticsearch"
 }

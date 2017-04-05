@@ -33,22 +33,14 @@
         {
             "fieldName": "description",
             "fieldType": "String"
-        },
-        {
-            "fieldName": "timestamp",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "userId",
-            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20170404150944",
-    "entityTableName": "water_change",
     "dto": "mapstruct",
-    "pagination": "no",
     "service": "serviceImpl",
+    "entityTableName": "water_change",
+    "pagination": "no",
+    "angularJSSuffix": "notes",
     "microserviceName": "pondNotes",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "notes"
+    "searchEngine": "elasticsearch"
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { JhiLanguageService } from 'ng-jhipster';
+import { JhiLanguageService, DataUtils } from 'ng-jhipster';
 import { ChemicalAnalysisNotes } from './chemical-analysis-notes.model';
 import { ChemicalAnalysisNotesService } from './chemical-analysis-notes.service';
 
@@ -15,6 +15,7 @@ export class ChemicalAnalysisNotesDetailComponent implements OnInit, OnDestroy {
 
     constructor(
         private jhiLanguageService: JhiLanguageService,
+        private dataUtils: DataUtils,
         private chemicalAnalysisService: ChemicalAnalysisNotesService,
         private route: ActivatedRoute
     ) {
@@ -31,6 +32,13 @@ export class ChemicalAnalysisNotesDetailComponent implements OnInit, OnDestroy {
         this.chemicalAnalysisService.find(id).subscribe(chemicalAnalysis => {
             this.chemicalAnalysis = chemicalAnalysis;
         });
+    }
+    byteSize(field) {
+        return this.dataUtils.byteSize(field);
+    }
+
+    openFile(contentType, field) {
+        return this.dataUtils.openFile(contentType, field);
     }
     previousState() {
         window.history.back();

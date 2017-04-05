@@ -11,7 +11,6 @@ export class TankNotes {
         public tankName?: string,
         public tankType?: TankType,
         public description?: string,
-        public timestamp?: number,
     ) {
     }
 }

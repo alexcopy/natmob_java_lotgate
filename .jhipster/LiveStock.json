@@ -31,22 +31,14 @@
             "fieldValidateRules": [
                 "required"
             ]
-        },
-        {
-            "fieldName": "timestamp",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "userId",
-            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20170404150944",
-    "entityTableName": "live_stock",
     "dto": "mapstruct",
-    "pagination": "pagination",
     "service": "serviceImpl",
+    "entityTableName": "live_stock",
+    "pagination": "pagination",
+    "angularJSSuffix": "notes",
     "microserviceName": "pondNotes",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "notes"
+    "searchEngine": "elasticsearch"
 }

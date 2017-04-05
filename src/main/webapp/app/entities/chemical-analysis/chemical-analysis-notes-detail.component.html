@@ -28,17 +28,18 @@
         <dd>
             <span>{{chemicalAnalysis.tempVal}}</span>
         </dd>
-        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.timestamp">Timestamp</span></dt>
-        <dd>
-            <span>{{chemicalAnalysis.timestamp}}</span>
-        </dd>
         <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.description">Description</span></dt>
         <dd>
             <span>{{chemicalAnalysis.description}}</span>
         </dd>
-        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.userId">User Id</span></dt>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.picture">Picture</span></dt>
         <dd>
-            <span>{{chemicalAnalysis.userId}}</span>
+            <div *ngIf="chemicalAnalysis.picture">
+                <a (click)="openFile(chemicalAnalysis.pictureContentType, chemicalAnalysis.picture)">
+                    <img [src]="'data:' + chemicalAnalysis.pictureContentType + ';base64,' + chemicalAnalysis.picture" style="max-width: 100%;" alt="chemicalAnalysis image"/>
+                </a>
+                {{chemicalAnalysis.pictureContentType}}, {{byteSize(chemicalAnalysis.picture)}}
+            </div>
         </dd>
     </dl>
 

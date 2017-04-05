@@ -7,9 +7,8 @@ export class ChemicalAnalysisNotes {
         public nH4?: string,
         public ph?: string,
         public tempVal?: number,
-        public timestamp?: number,
         public description?: string,
-        public userId?: number,
+        public picture?: any,
     ) {
     }
 }

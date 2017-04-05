@@ -33,24 +33,21 @@
             ]
         },
         {
-            "fieldName": "timestamp",
-            "fieldType": "Integer"
-        },
-        {
             "fieldName": "description",
             "fieldType": "String"
         },
         {
-            "fieldName": "userId",
-            "fieldType": "Integer"
+            "fieldName": "picture",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
         }
     ],
     "changelogDate": "20170404150944",
-    "entityTableName": "chemical_analysis",
     "dto": "mapstruct",
-    "pagination": "pagination",
     "service": "serviceImpl",
+    "entityTableName": "chemical_analysis",
+    "pagination": "pagination",
+    "angularJSSuffix": "notes",
     "microserviceName": "pondNotes",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "notes"
+    "searchEngine": "elasticsearch"
 }

@@ -5,7 +5,6 @@ export class LocationNotes {
         public postalCode?: string,
         public city?: string,
         public county?: string,
-        public timestamp?: number,
     ) {
     }
 }

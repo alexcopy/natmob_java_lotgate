@@ -17,9 +17,7 @@
             "qty": "Qty",
             "reason": "Reason",
             "tempVal": "Temp Val",
-            "timestamp": "Timestamp",
-            "description": "Description",
-            "userId": "User Id"
+            "description": "Description"
         }
     },
     "pondNotesApp": {

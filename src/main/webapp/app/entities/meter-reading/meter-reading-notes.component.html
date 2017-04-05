@@ -33,9 +33,7 @@
             <th jhiSortBy="readingDate"><span jhiTranslate="gatemicroApp.meterReading.readingDate">Reading Date</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="reading"><span jhiTranslate="gatemicroApp.meterReading.reading">Reading</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="tempVal"><span jhiTranslate="gatemicroApp.meterReading.tempVal">Temp Val</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="timestamp"><span jhiTranslate="gatemicroApp.meterReading.timestamp">Timestamp</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="description"><span jhiTranslate="gatemicroApp.meterReading.description">Description</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="userId"><span jhiTranslate="gatemicroApp.meterReading.userId">User Id</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
@@ -45,9 +43,7 @@
                 <td>{{meterReading.readingDate | date:'medium'}}</td>
                 <td>{{meterReading.reading}}</td>
                 <td>{{meterReading.tempVal}}</td>
-                <td>{{meterReading.timestamp}}</td>
                 <td>{{meterReading.description}}</td>
-                <td>{{meterReading.userId}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"
