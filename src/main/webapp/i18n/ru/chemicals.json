@@ -1,0 +1,32 @@
+{
+    "gatemicroApp": {
+        "chemicals" : {
+            "home": {
+                "title": "Chemicals",
+                "createLabel": "Создать новый Chemicals",
+                "createOrEditLabel": "Создать или отредактировать Chemicals",
+                "search": "Найти Chemicals"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Chemicals {{ id }}?"
+            },
+            "detail": {
+                "title": "Chemicals"
+            },
+            "date": "Date",
+            "qty": "Qty",
+            "reason": "Reason",
+            "tempVal": "Temp Val",
+            "timestamp": "Timestamp",
+            "description": "Description",
+            "userId": "User Id"
+        }
+    },
+    "pondNotesApp": {
+        "chemicals" : {
+            "created": "Новый Chemicals создан с идентификатором {{ param }}",
+            "updated": "Chemicals обновлен с идентификатором {{ param }}",
+            "deleted": "Chemicals удален с идентификатором {{ param }}"
+        }
+    }
+}

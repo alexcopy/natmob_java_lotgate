@@ -1,0 +1,34 @@
+{
+    "gatemicroApp": {
+        "rank" : {
+            "home": {
+                "title": "Ranks",
+                "createLabel": "Создать новый Rank",
+                "createOrEditLabel": "Создать или отредактировать Rank",
+                "search": "Найти Rank"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Rank {{ id }}?"
+            },
+            "detail": {
+                "title": "Rank"
+            },
+            "allNumbersRank": "All Numbers Rank",
+            "longOddEvenRank": "Long Odd Even Rank",
+            "shortOddEvenRank": "Short Odd Even Rank",
+            "shortHistorySumRank": "Short History Sum Rank",
+            "longHistSumRank": "Long Hist Sum Rank",
+            "summInHistRank": "Summ In Hist Rank",
+            "beenDrawnInPast": "Been Drawn In Past",
+            "summInRecentHistRank": "Summ In Recent Hist Rank",
+            "totalRank": "Total Rank"
+        }
+    },
+    "lotmicroApp": {
+        "rank" : {
+            "created": "Новый Rank создан с идентификатором {{ param }}",
+            "updated": "Rank обновлен с идентификатором {{ param }}",
+            "deleted": "Rank удален с идентификатором {{ param }}"
+        }
+    }
+}

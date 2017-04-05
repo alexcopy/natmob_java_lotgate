@@ -1,0 +1,77 @@
+
+<div *ngIf="localPlay">
+    <h2><span jhiTranslate="gatemicroApp.localPlay.detail.title">Local Play</span> {{localPlay.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gatemicroApp.localPlay.drawDate">Draw Date</span></dt>
+        <dd>
+            <span>{{localPlay.drawDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.draw">Draw</span></dt>
+        <dd>
+            <span>{{localPlay.draw}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.sumB">Sum B</span></dt>
+        <dd>
+            <span>{{localPlay.sumB}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.sumS">Sum S</span></dt>
+        <dd>
+            <span>{{localPlay.sumS}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.drawType">Draw Type</span></dt>
+        <dd>
+            <span>{{localPlay.drawType}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.gameType">Game Type</span></dt>
+        <dd>
+            <span jhiTranslate="{{'gatemicroApp.GameType.' + localPlay.gameType}}">{{localPlay.gameType}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.hash">Hash</span></dt>
+        <dd>
+            <span>{{localPlay.hash}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.prize">Prize</span></dt>
+        <dd>
+            <span>{{localPlay.prize}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.checked">Checked</span></dt>
+        <dd>
+            <span>{{localPlay.checked}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.bonusrankid">Bonusrankid</span></dt>
+        <dd>
+            <span>{{localPlay.bonusrankid}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.game">Game</span></dt>
+        <dd>
+            <span jhiTranslate="{{'gatemicroApp.GamesPlay.' + localPlay.game}}">{{localPlay.game}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.rank">Rank</span></dt>
+        <dd>
+            <div *ngIf="localPlay.rankId">
+                <a [routerLink]="['/rank-lotmicro', localPlay.rankId]">{{localPlay.rankId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.localPlay.bonusrank">Bonusrank</span></dt>
+        <dd>
+            <div *ngIf="localPlay.bonusrankId">
+                <a [routerLink]="['/bonus-rank-lotmicro', localPlay.bonusrankId]">{{localPlay.bonusrankId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'local-play-lotmicro/'+ localPlay.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

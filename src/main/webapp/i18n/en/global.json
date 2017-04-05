@@ -7,6 +7,22 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "registeredUserNotes": "Registered User",
+                "locationNotes": "Location",
+                "tankNotes": "Tank",
+                "deviceNotes": "Device",
+                "meterReadingNotes": "Meter Reading",
+                "waterChangeNotes": "Water Change",
+                "liveStockNotes": "Live Stock",
+                "chemicalAnalysisNotes": "Chemical Analysis",
+                "chemicalsNotes": "Chemicals",
+                "otherWorksNotes": "Other Works",
+                "rankLotmicro": "Rank",
+                "bonusRankLotmicro": "Bonus Rank",
+                "gameLotmicro": "Game",
+                "gameRuleLotmicro": "Game Rule",
+                "localPlayLotmicro": "Local Play",
+                "historyLotmicro": "History",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

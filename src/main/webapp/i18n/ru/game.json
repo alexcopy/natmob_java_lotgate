@@ -1,0 +1,26 @@
+{
+    "gatemicroApp": {
+        "game" : {
+            "home": {
+                "title": "Games",
+                "createLabel": "Создать новый Game",
+                "createOrEditLabel": "Создать или отредактировать Game",
+                "search": "Найти Game"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Game {{ id }}?"
+            },
+            "detail": {
+                "title": "Game"
+            },
+            "gameName": "Game Name"
+        }
+    },
+    "lotmicroApp": {
+        "game" : {
+            "created": "Новый Game создан с идентификатором {{ param }}",
+            "updated": "Game обновлен с идентификатором {{ param }}",
+            "deleted": "Game удален с идентификатором {{ param }}"
+        }
+    }
+}

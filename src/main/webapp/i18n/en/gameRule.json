@@ -1,0 +1,32 @@
+{
+    "gatemicroApp": {
+        "gameRule" : {
+            "home": {
+                "title": "Game Rules",
+                "createLabel": "Create a new Game Rule",
+                "createOrEditLabel": "Create or edit a Game Rule",
+                "search": "Search for Game Rule"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Game Rule {{ id }}?"
+            },
+            "detail": {
+                "title": "Game Rule"
+            },
+            "ticketPrice": "Ticket Price",
+            "prizeTable": "Prize Table",
+            "ballSet": "Ball Set",
+            "bonusSet": "Bonus Set",
+            "daysPlay": "Days Play",
+            "ballRange": "Ball Range",
+            "bonusRange": "Bonus Range"
+        }
+    },
+    "lotmicroApp": {
+        "gameRule" : {
+            "created": "A new Game Rule is created with identifier {{ param }}",
+            "updated": "A Game Rule is updated with identifier {{ param }}",
+            "deleted": "A Game Rule is deleted with identifier {{ param }}"
+        }
+    }
+}

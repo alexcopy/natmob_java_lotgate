@@ -1,0 +1,16 @@
+{
+    "gatemicroApp": {
+        "GamesPlay" : {
+            "null": "",
+            "EML": "EML",
+            "NAT": "NAT",
+            "THB": "THB",
+            "HOT": "HOT",
+            "EMLBONUS": "EMLBONUS",
+            "THBBONUS": "THBBONUS",
+            "EMLBALLS": "EMLBALLS",
+            "NATBALLS": "NATBALLS",
+            "THBBALLS": "THBBALLS"
+        }
+    }
+}

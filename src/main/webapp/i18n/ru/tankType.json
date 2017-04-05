@@ -1,0 +1,10 @@
+{
+    "gatemicroApp": {
+        "TankType" : {
+            "null": "",
+            "POND": "POND",
+            "AQUARIUM": "AQUARIUM",
+            "OTHER": "OTHER"
+        }
+    }
+}

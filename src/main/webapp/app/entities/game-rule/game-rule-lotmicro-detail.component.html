@@ -1,0 +1,49 @@
+
+<div *ngIf="gameRule">
+    <h2><span jhiTranslate="gatemicroApp.gameRule.detail.title">Game Rule</span> {{gameRule.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gatemicroApp.gameRule.ticketPrice">Ticket Price</span></dt>
+        <dd>
+            <span>{{gameRule.ticketPrice}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.gameRule.prizeTable">Prize Table</span></dt>
+        <dd>
+            <span>{{gameRule.prizeTable}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.gameRule.ballSet">Ball Set</span></dt>
+        <dd>
+            <span>{{gameRule.ballSet}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.gameRule.bonusSet">Bonus Set</span></dt>
+        <dd>
+            <span>{{gameRule.bonusSet}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.gameRule.daysPlay">Days Play</span></dt>
+        <dd>
+            <span>{{gameRule.daysPlay}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.gameRule.ballRange">Ball Range</span></dt>
+        <dd>
+            <span>{{gameRule.ballRange}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.gameRule.bonusRange">Bonus Range</span></dt>
+        <dd>
+            <span>{{gameRule.bonusRange}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'game-rule-lotmicro/'+ gameRule.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,45 @@
+
+<div *ngIf="meterReading">
+    <h2><span jhiTranslate="gatemicroApp.meterReading.detail.title">Meter Reading</span> {{meterReading.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gatemicroApp.meterReading.readingDate">Reading Date</span></dt>
+        <dd>
+            <span>{{meterReading.readingDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.meterReading.reading">Reading</span></dt>
+        <dd>
+            <span>{{meterReading.reading}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.meterReading.tempVal">Temp Val</span></dt>
+        <dd>
+            <span>{{meterReading.tempVal}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.meterReading.timestamp">Timestamp</span></dt>
+        <dd>
+            <span>{{meterReading.timestamp}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.meterReading.description">Description</span></dt>
+        <dd>
+            <span>{{meterReading.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.meterReading.userId">User Id</span></dt>
+        <dd>
+            <span>{{meterReading.userId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'meter-reading-notes/'+ meterReading.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

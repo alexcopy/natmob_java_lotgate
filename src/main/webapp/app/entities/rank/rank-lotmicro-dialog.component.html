@@ -1,0 +1,81 @@
+
+
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myRankLabel" jhiTranslate="gatemicroApp.rank.home.createOrEditLabel">Create or edit a Rank</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!rank.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="rank.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.allNumbersRank" for="field_allNumbersRank">All Numbers Rank</label>
+            <input type="number" class="form-control" name="allNumbersRank" id="field_allNumbersRank"
+                [(ngModel)]="rank.allNumbersRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.longOddEvenRank" for="field_longOddEvenRank">Long Odd Even Rank</label>
+            <input type="number" class="form-control" name="longOddEvenRank" id="field_longOddEvenRank"
+                [(ngModel)]="rank.longOddEvenRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.shortOddEvenRank" for="field_shortOddEvenRank">Short Odd Even Rank</label>
+            <input type="number" class="form-control" name="shortOddEvenRank" id="field_shortOddEvenRank"
+                [(ngModel)]="rank.shortOddEvenRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.shortHistorySumRank" for="field_shortHistorySumRank">Short History Sum Rank</label>
+            <input type="number" class="form-control" name="shortHistorySumRank" id="field_shortHistorySumRank"
+                [(ngModel)]="rank.shortHistorySumRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.longHistSumRank" for="field_longHistSumRank">Long Hist Sum Rank</label>
+            <input type="number" class="form-control" name="longHistSumRank" id="field_longHistSumRank"
+                [(ngModel)]="rank.longHistSumRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.summInHistRank" for="field_summInHistRank">Summ In Hist Rank</label>
+            <input type="number" class="form-control" name="summInHistRank" id="field_summInHistRank"
+                [(ngModel)]="rank.summInHistRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.beenDrawnInPast" for="field_beenDrawnInPast">Been Drawn In Past</label>
+            <input type="number" class="form-control" name="beenDrawnInPast" id="field_beenDrawnInPast"
+                [(ngModel)]="rank.beenDrawnInPast"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.summInRecentHistRank" for="field_summInRecentHistRank">Summ In Recent Hist Rank</label>
+            <input type="number" class="form-control" name="summInRecentHistRank" id="field_summInRecentHistRank"
+                [(ngModel)]="rank.summInRecentHistRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.rank.totalRank" for="field_totalRank">Total Rank</label>
+            <input type="number" class="form-control" name="totalRank" id="field_totalRank"
+                [(ngModel)]="rank.totalRank"
+             />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

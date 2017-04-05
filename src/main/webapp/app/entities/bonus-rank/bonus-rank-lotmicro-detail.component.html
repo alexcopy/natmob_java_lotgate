@@ -1,0 +1,49 @@
+
+<div *ngIf="bonusRank">
+    <h2><span jhiTranslate="gatemicroApp.bonusRank.detail.title">Bonus Rank</span> {{bonusRank.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gatemicroApp.bonusRank.summInRecentHistRank">Summ In Recent Hist Rank</span></dt>
+        <dd>
+            <span>{{bonusRank.summInRecentHistRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.bonusRank.probabilityAndMO">Probability And MO</span></dt>
+        <dd>
+            <span>{{bonusRank.probabilityAndMO}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.bonusRank.longOddEvenRank">Long Odd Even Rank</span></dt>
+        <dd>
+            <span>{{bonusRank.longOddEvenRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.bonusRank.summAnalisisWithWeights">Summ Analisis With Weights</span></dt>
+        <dd>
+            <span>{{bonusRank.summAnalisisWithWeights}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.bonusRank.inHistDueNotDueAnalisis">In Hist Due Not Due Analisis</span></dt>
+        <dd>
+            <span>{{bonusRank.inHistDueNotDueAnalisis}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.bonusRank.allNumbersRank">All Numbers Rank</span></dt>
+        <dd>
+            <span>{{bonusRank.allNumbersRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.bonusRank.totalRank">Total Rank</span></dt>
+        <dd>
+            <span>{{bonusRank.totalRank}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'bonus-rank-lotmicro/'+ bonusRank.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

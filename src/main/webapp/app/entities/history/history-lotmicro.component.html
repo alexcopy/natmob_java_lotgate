@@ -1,0 +1,113 @@
+<div>
+    <h2>
+        <span jhiTranslate="gatemicroApp.history.home.title">Histories</span>
+        <button class="btn btn-primary float-right create-history-lotmicro" [routerLink]="['/', { outlets: { popup: ['history-lotmicro-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="gatemicroApp.history.home.createLabel">
+            Create new History
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12 no-padding-right">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'gatemicroApp.history.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="histories">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="drawDate"><span jhiTranslate="gatemicroApp.history.drawDate">Draw Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ball1"><span jhiTranslate="gatemicroApp.history.ball1">Ball 1</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ball2"><span jhiTranslate="gatemicroApp.history.ball2">Ball 2</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ball3"><span jhiTranslate="gatemicroApp.history.ball3">Ball 3</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ball4"><span jhiTranslate="gatemicroApp.history.ball4">Ball 4</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ball5"><span jhiTranslate="gatemicroApp.history.ball5">Ball 5</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ball6"><span jhiTranslate="gatemicroApp.history.ball6">Ball 6</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="bonusBall1"><span jhiTranslate="gatemicroApp.history.bonusBall1">Bonus Ball 1</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="bonusBall2"><span jhiTranslate="gatemicroApp.history.bonusBall2">Bonus Ball 2</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="drawNumber"><span jhiTranslate="gatemicroApp.history.drawNumber">Draw Number</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ballSet"><span jhiTranslate="gatemicroApp.history.ballSet">Ball Set</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="wins"><span jhiTranslate="gatemicroApp.history.wins">Wins</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="machine"><span jhiTranslate="gatemicroApp.history.machine">Machine</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="sumB"><span jhiTranslate="gatemicroApp.history.sumB">Sum B</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="sumS"><span jhiTranslate="gatemicroApp.history.sumS">Sum S</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="jackpot"><span jhiTranslate="gatemicroApp.history.jackpot">Jackpot</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="hash"><span jhiTranslate="gatemicroApp.history.hash">Hash</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="drawHash"><span jhiTranslate="gatemicroApp.history.drawHash">Draw Hash</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="game"><span jhiTranslate="gatemicroApp.history.game">Game</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let history of histories ;trackBy: trackId">
+                <td><a [routerLink]="['../history-lotmicro', history.id ]">{{history.id}}</a></td>
+                <td>{{history.drawDate | date:'mediumDate'}}</td>
+                <td>{{history.ball1}}</td>
+                <td>{{history.ball2}}</td>
+                <td>{{history.ball3}}</td>
+                <td>{{history.ball4}}</td>
+                <td>{{history.ball5}}</td>
+                <td>{{history.ball6}}</td>
+                <td>{{history.bonusBall1}}</td>
+                <td>{{history.bonusBall2}}</td>
+                <td>{{history.drawNumber}}</td>
+                <td>{{history.ballSet}}</td>
+                <td>{{history.wins}}</td>
+                <td>{{history.machine}}</td>
+                <td>{{history.sumB}}</td>
+                <td>{{history.sumS}}</td>
+                <td>{{history.jackpot}}</td>
+                <td>{{history.hash}}</td>
+                <td>{{history.drawHash}}</td>
+                <td jhiTranslate="{{'gatemicroApp.GamesPlay.' + history.game}}">{{history.game}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../history-lotmicro', history.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'history-lotmicro/'+ history.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'history-lotmicro/'+ history.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="histories && histories.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

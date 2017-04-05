@@ -1,0 +1,31 @@
+{
+    "gatemicroApp": {
+        "meterReading" : {
+            "home": {
+                "title": "Meter Readings",
+                "createLabel": "Создать новый Meter Reading",
+                "createOrEditLabel": "Создать или отредактировать Meter Reading",
+                "search": "Найти Meter Reading"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Meter Reading {{ id }}?"
+            },
+            "detail": {
+                "title": "Meter Reading"
+            },
+            "readingDate": "Reading Date",
+            "reading": "Reading",
+            "tempVal": "Temp Val",
+            "timestamp": "Timestamp",
+            "description": "Description",
+            "userId": "User Id"
+        }
+    },
+    "pondNotesApp": {
+        "meterReading" : {
+            "created": "Новый Meter Reading создан с идентификатором {{ param }}",
+            "updated": "Meter Reading обновлен с идентификатором {{ param }}",
+            "deleted": "Meter Reading удален с идентификатором {{ param }}"
+        }
+    }
+}

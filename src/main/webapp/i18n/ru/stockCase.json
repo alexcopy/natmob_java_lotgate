@@ -1,0 +1,12 @@
+{
+    "gatemicroApp": {
+        "StockCase" : {
+            "null": "",
+            "ADDED": "ADDED",
+            "REMOVED": "REMOVED",
+            "DIED": "DIED",
+            "HERON": "HERON",
+            "OTHER": "OTHER"
+        }
+    }
+}

@@ -2,7 +2,8 @@
   "generator-jhipster": {
     "promptValues": {
       "packageName": "ru.m2mcom.gateway",
-      "nativeLanguage": "en"
+      "nativeLanguage": "en",
+      "microservicePath": "/Users/alexredko/Projects/jhipster/ru.m2mcom.natmob/lotmicro"
     },
     "jhipsterVersion": "4.1.1",
     "baseName": "gatemicro",

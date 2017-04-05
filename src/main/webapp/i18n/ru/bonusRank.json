@@ -1,0 +1,32 @@
+{
+    "gatemicroApp": {
+        "bonusRank" : {
+            "home": {
+                "title": "Bonus Ranks",
+                "createLabel": "Создать новый Bonus Rank",
+                "createOrEditLabel": "Создать или отредактировать Bonus Rank",
+                "search": "Найти Bonus Rank"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Bonus Rank {{ id }}?"
+            },
+            "detail": {
+                "title": "Bonus Rank"
+            },
+            "summInRecentHistRank": "Summ In Recent Hist Rank",
+            "probabilityAndMO": "Probability And MO",
+            "longOddEvenRank": "Long Odd Even Rank",
+            "summAnalisisWithWeights": "Summ Analisis With Weights",
+            "inHistDueNotDueAnalisis": "In Hist Due Not Due Analisis",
+            "allNumbersRank": "All Numbers Rank",
+            "totalRank": "Total Rank"
+        }
+    },
+    "lotmicroApp": {
+        "bonusRank" : {
+            "created": "Новый Bonus Rank создан с идентификатором {{ param }}",
+            "updated": "Bonus Rank обновлен с идентификатором {{ param }}",
+            "deleted": "Bonus Rank удален с идентификатором {{ param }}"
+        }
+    }
+}

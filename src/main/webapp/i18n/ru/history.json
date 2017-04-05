@@ -1,0 +1,44 @@
+{
+    "gatemicroApp": {
+        "history" : {
+            "home": {
+                "title": "Histories",
+                "createLabel": "Создать новый History",
+                "createOrEditLabel": "Создать или отредактировать History",
+                "search": "Найти History"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить History {{ id }}?"
+            },
+            "detail": {
+                "title": "History"
+            },
+            "drawDate": "Draw Date",
+            "ball1": "Ball 1",
+            "ball2": "Ball 2",
+            "ball3": "Ball 3",
+            "ball4": "Ball 4",
+            "ball5": "Ball 5",
+            "ball6": "Ball 6",
+            "bonusBall1": "Bonus Ball 1",
+            "bonusBall2": "Bonus Ball 2",
+            "drawNumber": "Draw Number",
+            "ballSet": "Ball Set",
+            "wins": "Wins",
+            "machine": "Machine",
+            "sumB": "Sum B",
+            "sumS": "Sum S",
+            "jackpot": "Jackpot",
+            "hash": "Hash",
+            "drawHash": "Draw Hash",
+            "game": "Game"
+        }
+    },
+    "lotmicroApp": {
+        "history" : {
+            "created": "Новый History создан с идентификатором {{ param }}",
+            "updated": "History обновлен с идентификатором {{ param }}",
+            "deleted": "History удален с идентификатором {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,134 @@
+
+
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myLocalPlayLabel" jhiTranslate="gatemicroApp.localPlay.home.createOrEditLabel">Create or edit a Local Play</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!localPlay.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="localPlay.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.drawDate" for="field_drawDate">Draw Date</label>
+            <div class="input-group">
+                <input id="field_drawDate" type="text" class="form-control" name="drawDate" ngbDatepicker  #drawDateDp="ngbDatepicker" [(ngModel)]="localPlay.drawDate"
+                required/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" (click)="drawDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+            <div [hidden]="!(editForm.controls.drawDate?.dirty && editForm.controls.drawDate?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.drawDate?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.draw" for="field_draw">Draw</label>
+            <input type="text" class="form-control" name="draw" id="field_draw"
+                [(ngModel)]="localPlay.draw"
+            required />
+            <div [hidden]="!(editForm.controls.draw?.dirty && editForm.controls.draw?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.draw?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.sumB" for="field_sumB">Sum B</label>
+            <input type="number" class="form-control" name="sumB" id="field_sumB"
+                [(ngModel)]="localPlay.sumB"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.sumS" for="field_sumS">Sum S</label>
+            <input type="number" class="form-control" name="sumS" id="field_sumS"
+                [(ngModel)]="localPlay.sumS"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.drawType" for="field_drawType">Draw Type</label>
+            <input type="text" class="form-control" name="drawType" id="field_drawType"
+                [(ngModel)]="localPlay.drawType"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.gameType" for="field_gameType">Game Type</label>
+            <select class="form-control" name="gameType" [(ngModel)]="localPlay.gameType" id="field_gameType" >
+                <option value="LOCAL" jhiTranslate="gatemicroApp.GameType.LOCAL">LOCAL</option>
+                <option value="MANUAL" jhiTranslate="gatemicroApp.GameType.MANUAL">MANUAL</option>
+                <option value="REJECTED" jhiTranslate="gatemicroApp.GameType.REJECTED">REJECTED</option>
+                <option value="REAL" jhiTranslate="gatemicroApp.GameType.REAL">REAL</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.hash" for="field_hash">Hash</label>
+            <input type="text" class="form-control" name="hash" id="field_hash"
+                [(ngModel)]="localPlay.hash"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.prize" for="field_prize">Prize</label>
+            <input type="number" class="form-control" name="prize" id="field_prize"
+                [(ngModel)]="localPlay.prize"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.checked" for="field_checked">Checked</label>
+            <input type="number" class="form-control" name="checked" id="field_checked"
+                [(ngModel)]="localPlay.checked"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.bonusrankid" for="field_bonusrankid">Bonusrankid</label>
+            <input type="number" class="form-control" name="bonusrankid" id="field_bonusrankid"
+                [(ngModel)]="localPlay.bonusrankid"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.localPlay.game" for="field_game">Game</label>
+            <select class="form-control" name="game" [(ngModel)]="localPlay.game" id="field_game" >
+                <option value="EML" jhiTranslate="gatemicroApp.GamesPlay.EML">EML</option>
+                <option value="NAT" jhiTranslate="gatemicroApp.GamesPlay.NAT">NAT</option>
+                <option value="THB" jhiTranslate="gatemicroApp.GamesPlay.THB">THB</option>
+                <option value="HOT" jhiTranslate="gatemicroApp.GamesPlay.HOT">HOT</option>
+                <option value="EMLBONUS" jhiTranslate="gatemicroApp.GamesPlay.EMLBONUS">EMLBONUS</option>
+                <option value="THBBONUS" jhiTranslate="gatemicroApp.GamesPlay.THBBONUS">THBBONUS</option>
+                <option value="EMLBALLS" jhiTranslate="gatemicroApp.GamesPlay.EMLBALLS">EMLBALLS</option>
+                <option value="NATBALLS" jhiTranslate="gatemicroApp.GamesPlay.NATBALLS">NATBALLS</option>
+                <option value="THBBALLS" jhiTranslate="gatemicroApp.GamesPlay.THBBALLS">THBBALLS</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="gatemicroApp.localPlay.rank" for="field_rank">Rank</label>
+            <select class="form-control" id="field_rank" name="rank" [(ngModel)]="localPlay.rankId">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="rankOption.id" *ngFor="let rankOption of ranks; trackBy: trackRankById">{{rankOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="gatemicroApp.localPlay.bonusrank" for="field_bonusrank">Bonusrank</label>
+            <select class="form-control" id="field_bonusrank" name="bonusrank" [(ngModel)]="localPlay.bonusrankId">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="bonusRankOption.id" *ngFor="let bonusRankOption of bonusranks; trackBy: trackBonusRankById">{{bonusRankOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

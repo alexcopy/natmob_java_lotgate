@@ -1,0 +1,69 @@
+
+
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myBonusRankLabel" jhiTranslate="gatemicroApp.bonusRank.home.createOrEditLabel">Create or edit a Bonus Rank</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!bonusRank.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="bonusRank.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.bonusRank.summInRecentHistRank" for="field_summInRecentHistRank">Summ In Recent Hist Rank</label>
+            <input type="number" class="form-control" name="summInRecentHistRank" id="field_summInRecentHistRank"
+                [(ngModel)]="bonusRank.summInRecentHistRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.bonusRank.probabilityAndMO" for="field_probabilityAndMO">Probability And MO</label>
+            <input type="number" class="form-control" name="probabilityAndMO" id="field_probabilityAndMO"
+                [(ngModel)]="bonusRank.probabilityAndMO"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.bonusRank.longOddEvenRank" for="field_longOddEvenRank">Long Odd Even Rank</label>
+            <input type="number" class="form-control" name="longOddEvenRank" id="field_longOddEvenRank"
+                [(ngModel)]="bonusRank.longOddEvenRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.bonusRank.summAnalisisWithWeights" for="field_summAnalisisWithWeights">Summ Analisis With Weights</label>
+            <input type="number" class="form-control" name="summAnalisisWithWeights" id="field_summAnalisisWithWeights"
+                [(ngModel)]="bonusRank.summAnalisisWithWeights"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.bonusRank.inHistDueNotDueAnalisis" for="field_inHistDueNotDueAnalisis">In Hist Due Not Due Analisis</label>
+            <input type="number" class="form-control" name="inHistDueNotDueAnalisis" id="field_inHistDueNotDueAnalisis"
+                [(ngModel)]="bonusRank.inHistDueNotDueAnalisis"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.bonusRank.allNumbersRank" for="field_allNumbersRank">All Numbers Rank</label>
+            <input type="number" class="form-control" name="allNumbersRank" id="field_allNumbersRank"
+                [(ngModel)]="bonusRank.allNumbersRank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.bonusRank.totalRank" for="field_totalRank">Total Rank</label>
+            <input type="number" class="form-control" name="totalRank" id="field_totalRank"
+                [(ngModel)]="bonusRank.totalRank"
+             />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

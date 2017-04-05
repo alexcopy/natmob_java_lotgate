@@ -1,0 +1,85 @@
+<div>
+    <h2>
+        <span jhiTranslate="gatemicroApp.rank.home.title">Ranks</span>
+        <button class="btn btn-primary float-right create-rank-lotmicro" [routerLink]="['/', { outlets: { popup: ['rank-lotmicro-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="gatemicroApp.rank.home.createLabel">
+            Create new Rank
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12 no-padding-right">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'gatemicroApp.rank.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="ranks">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.allNumbersRank">All Numbers Rank</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.longOddEvenRank">Long Odd Even Rank</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.shortOddEvenRank">Short Odd Even Rank</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.shortHistorySumRank">Short History Sum Rank</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.longHistSumRank">Long Hist Sum Rank</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.summInHistRank">Summ In Hist Rank</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.beenDrawnInPast">Been Drawn In Past</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.summInRecentHistRank">Summ In Recent Hist Rank</span></th>
+            <th><span jhiTranslate="gatemicroApp.rank.totalRank">Total Rank</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let rank of ranks ;trackBy: trackId">
+                <td><a [routerLink]="['../rank-lotmicro', rank.id ]">{{rank.id}}</a></td>
+                <td>{{rank.allNumbersRank}}</td>
+                <td>{{rank.longOddEvenRank}}</td>
+                <td>{{rank.shortOddEvenRank}}</td>
+                <td>{{rank.shortHistorySumRank}}</td>
+                <td>{{rank.longHistSumRank}}</td>
+                <td>{{rank.summInHistRank}}</td>
+                <td>{{rank.beenDrawnInPast}}</td>
+                <td>{{rank.summInRecentHistRank}}</td>
+                <td>{{rank.totalRank}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../rank-lotmicro', rank.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'rank-lotmicro/'+ rank.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'rank-lotmicro/'+ rank.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

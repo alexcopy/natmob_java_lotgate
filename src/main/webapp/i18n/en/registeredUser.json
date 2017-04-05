@@ -1,0 +1,27 @@
+{
+    "gatemicroApp": {
+        "registeredUser" : {
+            "home": {
+                "title": "Registered Users",
+                "createLabel": "Create a new Registered User",
+                "createOrEditLabel": "Create or edit a Registered User",
+                "search": "Search for Registered User"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Registered User {{ id }}?"
+            },
+            "detail": {
+                "title": "Registered User"
+            },
+            "userName": "User Name",
+            "description": "Description"
+        }
+    },
+    "pondNotesApp": {
+        "registeredUser" : {
+            "created": "A new Registered User is created with identifier {{ param }}",
+            "updated": "A Registered User is updated with identifier {{ param }}",
+            "deleted": "A Registered User is deleted with identifier {{ param }}"
+        }
+    }
+}

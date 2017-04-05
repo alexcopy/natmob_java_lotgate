@@ -1,0 +1,11 @@
+{
+    "gatemicroApp": {
+        "GameType" : {
+            "null": "",
+            "LOCAL": "LOCAL",
+            "MANUAL": "MANUAL",
+            "REJECTED": "REJECTED",
+            "REAL": "REAL"
+        }
+    }
+}

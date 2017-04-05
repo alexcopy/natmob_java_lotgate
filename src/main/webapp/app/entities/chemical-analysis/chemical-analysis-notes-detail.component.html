@@ -1,0 +1,57 @@
+
+<div *ngIf="chemicalAnalysis">
+    <h2><span jhiTranslate="gatemicroApp.chemicalAnalysis.detail.title">Chemical Analysis</span> {{chemicalAnalysis.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.date">Date</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.date | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.nO2">N O 2</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.nO2}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.nO3">N O 3</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.nO3}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.nH4">N H 4</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.nH4}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.ph">Ph</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.ph}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.tempVal">Temp Val</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.tempVal}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.timestamp">Timestamp</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.timestamp}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.description">Description</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.chemicalAnalysis.userId">User Id</span></dt>
+        <dd>
+            <span>{{chemicalAnalysis.userId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'chemical-analysis-notes/'+ chemicalAnalysis.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

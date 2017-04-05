@@ -1,0 +1,57 @@
+
+<div *ngIf="rank">
+    <h2><span jhiTranslate="gatemicroApp.rank.detail.title">Rank</span> {{rank.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gatemicroApp.rank.allNumbersRank">All Numbers Rank</span></dt>
+        <dd>
+            <span>{{rank.allNumbersRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.rank.longOddEvenRank">Long Odd Even Rank</span></dt>
+        <dd>
+            <span>{{rank.longOddEvenRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.rank.shortOddEvenRank">Short Odd Even Rank</span></dt>
+        <dd>
+            <span>{{rank.shortOddEvenRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.rank.shortHistorySumRank">Short History Sum Rank</span></dt>
+        <dd>
+            <span>{{rank.shortHistorySumRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.rank.longHistSumRank">Long Hist Sum Rank</span></dt>
+        <dd>
+            <span>{{rank.longHistSumRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.rank.summInHistRank">Summ In Hist Rank</span></dt>
+        <dd>
+            <span>{{rank.summInHistRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.rank.beenDrawnInPast">Been Drawn In Past</span></dt>
+        <dd>
+            <span>{{rank.beenDrawnInPast}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.rank.summInRecentHistRank">Summ In Recent Hist Rank</span></dt>
+        <dd>
+            <span>{{rank.summInRecentHistRank}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.rank.totalRank">Total Rank</span></dt>
+        <dd>
+            <span>{{rank.totalRank}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'rank-lotmicro/'+ rank.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

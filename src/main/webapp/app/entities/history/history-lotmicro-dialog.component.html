@@ -1,0 +1,159 @@
+
+
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myHistoryLabel" jhiTranslate="gatemicroApp.history.home.createOrEditLabel">Create or edit a History</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!history.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="history.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.drawDate" for="field_drawDate">Draw Date</label>
+            <div class="input-group">
+                <input id="field_drawDate" type="text" class="form-control" name="drawDate" ngbDatepicker  #drawDateDp="ngbDatepicker" [(ngModel)]="history.drawDate"
+                required/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" (click)="drawDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+            <div [hidden]="!(editForm.controls.drawDate?.dirty && editForm.controls.drawDate?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.drawDate?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.ball1" for="field_ball1">Ball 1</label>
+            <input type="number" class="form-control" name="ball1" id="field_ball1"
+                [(ngModel)]="history.ball1"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.ball2" for="field_ball2">Ball 2</label>
+            <input type="number" class="form-control" name="ball2" id="field_ball2"
+                [(ngModel)]="history.ball2"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.ball3" for="field_ball3">Ball 3</label>
+            <input type="number" class="form-control" name="ball3" id="field_ball3"
+                [(ngModel)]="history.ball3"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.ball4" for="field_ball4">Ball 4</label>
+            <input type="number" class="form-control" name="ball4" id="field_ball4"
+                [(ngModel)]="history.ball4"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.ball5" for="field_ball5">Ball 5</label>
+            <input type="number" class="form-control" name="ball5" id="field_ball5"
+                [(ngModel)]="history.ball5"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.ball6" for="field_ball6">Ball 6</label>
+            <input type="number" class="form-control" name="ball6" id="field_ball6"
+                [(ngModel)]="history.ball6"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.bonusBall1" for="field_bonusBall1">Bonus Ball 1</label>
+            <input type="number" class="form-control" name="bonusBall1" id="field_bonusBall1"
+                [(ngModel)]="history.bonusBall1"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.bonusBall2" for="field_bonusBall2">Bonus Ball 2</label>
+            <input type="number" class="form-control" name="bonusBall2" id="field_bonusBall2"
+                [(ngModel)]="history.bonusBall2"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.drawNumber" for="field_drawNumber">Draw Number</label>
+            <input type="number" class="form-control" name="drawNumber" id="field_drawNumber"
+                [(ngModel)]="history.drawNumber"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.ballSet" for="field_ballSet">Ball Set</label>
+            <input type="text" class="form-control" name="ballSet" id="field_ballSet"
+                [(ngModel)]="history.ballSet"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.wins" for="field_wins">Wins</label>
+            <input type="text" class="form-control" name="wins" id="field_wins"
+                [(ngModel)]="history.wins"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.machine" for="field_machine">Machine</label>
+            <input type="text" class="form-control" name="machine" id="field_machine"
+                [(ngModel)]="history.machine"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.sumB" for="field_sumB">Sum B</label>
+            <input type="number" class="form-control" name="sumB" id="field_sumB"
+                [(ngModel)]="history.sumB"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.sumS" for="field_sumS">Sum S</label>
+            <input type="number" class="form-control" name="sumS" id="field_sumS"
+                [(ngModel)]="history.sumS"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.jackpot" for="field_jackpot">Jackpot</label>
+            <input type="number" class="form-control" name="jackpot" id="field_jackpot"
+                [(ngModel)]="history.jackpot"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.hash" for="field_hash">Hash</label>
+            <input type="text" class="form-control" name="hash" id="field_hash"
+                [(ngModel)]="history.hash"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.drawHash" for="field_drawHash">Draw Hash</label>
+            <input type="text" class="form-control" name="drawHash" id="field_drawHash"
+                [(ngModel)]="history.drawHash"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gatemicroApp.history.game" for="field_game">Game</label>
+            <select class="form-control" name="game" [(ngModel)]="history.game" id="field_game" >
+                <option value="EML" jhiTranslate="gatemicroApp.GamesPlay.EML">EML</option>
+                <option value="NAT" jhiTranslate="gatemicroApp.GamesPlay.NAT">NAT</option>
+                <option value="THB" jhiTranslate="gatemicroApp.GamesPlay.THB">THB</option>
+                <option value="HOT" jhiTranslate="gatemicroApp.GamesPlay.HOT">HOT</option>
+                <option value="EMLBONUS" jhiTranslate="gatemicroApp.GamesPlay.EMLBONUS">EMLBONUS</option>
+                <option value="THBBONUS" jhiTranslate="gatemicroApp.GamesPlay.THBBONUS">THBBONUS</option>
+                <option value="EMLBALLS" jhiTranslate="gatemicroApp.GamesPlay.EMLBALLS">EMLBALLS</option>
+                <option value="NATBALLS" jhiTranslate="gatemicroApp.GamesPlay.NATBALLS">NATBALLS</option>
+                <option value="THBBALLS" jhiTranslate="gatemicroApp.GamesPlay.THBBALLS">THBBALLS</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

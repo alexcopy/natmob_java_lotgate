@@ -1,0 +1,97 @@
+
+<div *ngIf="history">
+    <h2><span jhiTranslate="gatemicroApp.history.detail.title">History</span> {{history.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gatemicroApp.history.drawDate">Draw Date</span></dt>
+        <dd>
+            <span>{{history.drawDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.ball1">Ball 1</span></dt>
+        <dd>
+            <span>{{history.ball1}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.ball2">Ball 2</span></dt>
+        <dd>
+            <span>{{history.ball2}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.ball3">Ball 3</span></dt>
+        <dd>
+            <span>{{history.ball3}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.ball4">Ball 4</span></dt>
+        <dd>
+            <span>{{history.ball4}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.ball5">Ball 5</span></dt>
+        <dd>
+            <span>{{history.ball5}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.ball6">Ball 6</span></dt>
+        <dd>
+            <span>{{history.ball6}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.bonusBall1">Bonus Ball 1</span></dt>
+        <dd>
+            <span>{{history.bonusBall1}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.bonusBall2">Bonus Ball 2</span></dt>
+        <dd>
+            <span>{{history.bonusBall2}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.drawNumber">Draw Number</span></dt>
+        <dd>
+            <span>{{history.drawNumber}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.ballSet">Ball Set</span></dt>
+        <dd>
+            <span>{{history.ballSet}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.wins">Wins</span></dt>
+        <dd>
+            <span>{{history.wins}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.machine">Machine</span></dt>
+        <dd>
+            <span>{{history.machine}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.sumB">Sum B</span></dt>
+        <dd>
+            <span>{{history.sumB}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.sumS">Sum S</span></dt>
+        <dd>
+            <span>{{history.sumS}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.jackpot">Jackpot</span></dt>
+        <dd>
+            <span>{{history.jackpot}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.hash">Hash</span></dt>
+        <dd>
+            <span>{{history.hash}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.drawHash">Draw Hash</span></dt>
+        <dd>
+            <span>{{history.drawHash}}</span>
+        </dd>
+        <dt><span jhiTranslate="gatemicroApp.history.game">Game</span></dt>
+        <dd>
+            <span jhiTranslate="{{'gatemicroApp.GamesPlay.' + history.game}}">{{history.game}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'history-lotmicro/'+ history.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

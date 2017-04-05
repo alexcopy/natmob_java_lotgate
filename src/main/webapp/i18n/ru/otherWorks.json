@@ -1,0 +1,32 @@
+{
+    "gatemicroApp": {
+        "otherWorks" : {
+            "home": {
+                "title": "Other Works",
+                "createLabel": "Создать новый Other Works",
+                "createOrEditLabel": "Создать или отредактировать Other Works",
+                "search": "Найти Other Works"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Other Works {{ id }}?"
+            },
+            "detail": {
+                "title": "Other Works"
+            },
+            "date": "Date",
+            "reason": "Reason",
+            "qty": "Qty",
+            "tempVal": "Temp Val",
+            "timestamp": "Timestamp",
+            "description": "Description",
+            "userId": "User Id"
+        }
+    },
+    "pondNotesApp": {
+        "otherWorks" : {
+            "created": "Новый Other Works создан с идентификатором {{ param }}",
+            "updated": "Other Works обновлен с идентификатором {{ param }}",
+            "deleted": "Other Works удален с идентификатором {{ param }}"
+        }
+    }
+}

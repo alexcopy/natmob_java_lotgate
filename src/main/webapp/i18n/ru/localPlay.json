@@ -1,0 +1,38 @@
+{
+    "gatemicroApp": {
+        "localPlay" : {
+            "home": {
+                "title": "Local Plays",
+                "createLabel": "Создать новый Local Play",
+                "createOrEditLabel": "Создать или отредактировать Local Play",
+                "search": "Найти Local Play"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Local Play {{ id }}?"
+            },
+            "detail": {
+                "title": "Local Play"
+            },
+            "drawDate": "Draw Date",
+            "draw": "Draw",
+            "sumB": "Sum B",
+            "sumS": "Sum S",
+            "drawType": "Draw Type",
+            "gameType": "Game Type",
+            "hash": "Hash",
+            "prize": "Prize",
+            "checked": "Checked",
+            "bonusrankid": "Bonusrankid",
+            "game": "Game",
+            "rank": "Rank",
+            "bonusrank": "Bonusrank"
+        }
+    },
+    "lotmicroApp": {
+        "localPlay" : {
+            "created": "Новый Local Play создан с идентификатором {{ param }}",
+            "updated": "Local Play обновлен с идентификатором {{ param }}",
+            "deleted": "Local Play удален с идентификатором {{ param }}"
+        }
+    }
+}
