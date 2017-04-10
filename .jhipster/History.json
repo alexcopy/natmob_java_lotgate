@@ -42,10 +42,6 @@
             "fieldType": "Integer"
         },
         {
-            "fieldName": "drawNumber",
-            "fieldType": "Integer"
-        },
-        {
             "fieldName": "ballSet",
             "fieldType": "String"
         },
@@ -54,28 +50,8 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "machine",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "sumB",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "sumS",
-            "fieldType": "Integer"
-        },
-        {
             "fieldName": "jackpot",
             "fieldType": "Integer"
-        },
-        {
-            "fieldName": "hash",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "drawHash",
-            "fieldType": "String"
         },
         {
             "fieldName": "game",
@@ -84,11 +60,11 @@
         }
     ],
     "changelogDate": "20170403213631",
-    "entityTableName": "history",
     "dto": "mapstruct",
-    "pagination": "pagination",
     "service": "serviceImpl",
+    "entityTableName": "history",
+    "pagination": "pagination",
+    "angularJSSuffix": "lotmicro",
     "microserviceName": "lotmicro",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "lotmicro"
+    "searchEngine": "elasticsearch"
 }

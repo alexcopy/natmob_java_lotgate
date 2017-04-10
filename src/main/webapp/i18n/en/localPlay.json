@@ -14,15 +14,7 @@
                 "title": "Local Play"
             },
             "drawDate": "Draw Date",
-            "draw": "Draw",
-            "sumB": "Sum B",
-            "sumS": "Sum S",
-            "drawType": "Draw Type",
-            "gameType": "Game Type",
-            "hash": "Hash",
-            "prize": "Prize",
             "checked": "Checked",
-            "bonusrankid": "Bonusrankid",
             "game": "Game",
             "rank": "Rank",
             "bonusrank": "Bonusrank"

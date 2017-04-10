@@ -18,7 +18,7 @@ export class LocalPlayLotmicroDetailComponent implements OnInit, OnDestroy {
         private localPlayService: LocalPlayLotmicroService,
         private route: ActivatedRoute
     ) {
-        this.jhiLanguageService.setLocations(['localPlay', 'gameType', 'gamesPlay']);
+        this.jhiLanguageService.setLocations(['localPlay', 'gamesPlay']);
     }
 
     ngOnInit() {

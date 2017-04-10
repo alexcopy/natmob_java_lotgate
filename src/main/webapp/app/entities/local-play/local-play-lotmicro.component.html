@@ -31,15 +31,7 @@
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="drawDate"><span jhiTranslate="gatemicroApp.localPlay.drawDate">Draw Date</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="draw"><span jhiTranslate="gatemicroApp.localPlay.draw">Draw</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="sumB"><span jhiTranslate="gatemicroApp.localPlay.sumB">Sum B</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="sumS"><span jhiTranslate="gatemicroApp.localPlay.sumS">Sum S</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="drawType"><span jhiTranslate="gatemicroApp.localPlay.drawType">Draw Type</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="gameType"><span jhiTranslate="gatemicroApp.localPlay.gameType">Game Type</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="hash"><span jhiTranslate="gatemicroApp.localPlay.hash">Hash</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="prize"><span jhiTranslate="gatemicroApp.localPlay.prize">Prize</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="checked"><span jhiTranslate="gatemicroApp.localPlay.checked">Checked</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="bonusrankid"><span jhiTranslate="gatemicroApp.localPlay.bonusrankid">Bonusrankid</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="game"><span jhiTranslate="gatemicroApp.localPlay.game">Game</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="rankId"><span jhiTranslate="gatemicroApp.localPlay.rank">Rank</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="bonusrankId"><span jhiTranslate="gatemicroApp.localPlay.bonusrank">Bonusrank</span> <span class="fa fa-sort"></span></th>
@@ -50,15 +42,7 @@
             <tr *ngFor="let localPlay of localPlays ;trackBy: trackId">
                 <td><a [routerLink]="['../local-play-lotmicro', localPlay.id ]">{{localPlay.id}}</a></td>
                 <td>{{localPlay.drawDate | date:'mediumDate'}}</td>
-                <td>{{localPlay.draw}}</td>
-                <td>{{localPlay.sumB}}</td>
-                <td>{{localPlay.sumS}}</td>
-                <td>{{localPlay.drawType}}</td>
-                <td jhiTranslate="{{'gatemicroApp.GameType.' + localPlay.gameType}}">{{localPlay.gameType}}</td>
-                <td>{{localPlay.hash}}</td>
-                <td>{{localPlay.prize}}</td>
                 <td>{{localPlay.checked}}</td>
-                <td>{{localPlay.bonusrankid}}</td>
                 <td jhiTranslate="{{'gatemicroApp.GamesPlay.' + localPlay.game}}">{{localPlay.game}}</td>
                 <td>
                     <div *ngIf="localPlay.rankId">

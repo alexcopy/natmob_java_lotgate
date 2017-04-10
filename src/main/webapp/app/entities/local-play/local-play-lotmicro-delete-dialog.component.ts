@@ -22,7 +22,7 @@ export class LocalPlayLotmicroDeleteDialogComponent {
         public activeModal: NgbActiveModal,
         private eventManager: EventManager
     ) {
-        this.jhiLanguageService.setLocations(['localPlay', 'gameType', 'gamesPlay']);
+        this.jhiLanguageService.setLocations(['localPlay', 'gamesPlay']);
     }
 
     clear () {

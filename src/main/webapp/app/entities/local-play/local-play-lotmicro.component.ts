@@ -45,7 +45,7 @@ export class LocalPlayLotmicroComponent implements OnInit, OnDestroy {
         this.predicate = 'id';
         this.reverse = true;
         this.currentSearch = activatedRoute.snapshot.params['search'] ? activatedRoute.snapshot.params['search'] : '';
-        this.jhiLanguageService.setLocations(['localPlay', 'gameType', 'gamesPlay']);
+        this.jhiLanguageService.setLocations(['localPlay', 'gamesPlay']);
     }
 
     loadAll () {

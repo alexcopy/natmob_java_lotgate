@@ -22,15 +22,9 @@
             "ball6": "Ball 6",
             "bonusBall1": "Bonus Ball 1",
             "bonusBall2": "Bonus Ball 2",
-            "drawNumber": "Draw Number",
             "ballSet": "Ball Set",
             "wins": "Wins",
-            "machine": "Machine",
-            "sumB": "Sum B",
-            "sumS": "Sum S",
             "jackpot": "Jackpot",
-            "hash": "Hash",
-            "drawHash": "Draw Hash",
             "game": "Game"
         }
     },

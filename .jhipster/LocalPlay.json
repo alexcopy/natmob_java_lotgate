@@ -27,44 +27,7 @@
             ]
         },
         {
-            "fieldName": "draw",
-            "javadoc": "json format",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "sumB",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "sumS",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "drawType",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "gameType",
-            "fieldType": "GameType",
-            "fieldValues": "LOCAL,MANUAL,REJECTED,REAL"
-        },
-        {
-            "fieldName": "hash",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "prize",
-            "fieldType": "Double"
-        },
-        {
             "fieldName": "checked",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "bonusrankid",
             "fieldType": "Integer"
         },
         {
@@ -74,11 +37,11 @@
         }
     ],
     "changelogDate": "20170403213631",
-    "entityTableName": "local_play",
     "dto": "mapstruct",
-    "pagination": "infinite-scroll",
     "service": "serviceImpl",
+    "entityTableName": "local_play",
+    "pagination": "infinite-scroll",
+    "angularJSSuffix": "lotmicro",
     "microserviceName": "lotmicro",
-    "searchEngine": "elasticsearch",
-    "angularJSSuffix": "lotmicro"
+    "searchEngine": "elasticsearch"
 }

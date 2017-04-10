@@ -33,7 +33,7 @@ export class LocalPlayLotmicroDialogComponent implements OnInit {
         private bonusRankService: BonusRankLotmicroService,
         private eventManager: EventManager
     ) {
-        this.jhiLanguageService.setLocations(['localPlay', 'gameType', 'gamesPlay']);
+        this.jhiLanguageService.setLocations(['localPlay', 'gamesPlay']);
     }
 
     ngOnInit() {
